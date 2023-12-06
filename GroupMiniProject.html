@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="GroupMiniProject.tex"> 
+<link rel="stylesheet" type="text/css" href="GroupMiniProject.css"> 
+</head><body 
+>
+<!--l. 41--><p class="noindent" >The submission deadline for this assignment is <span 
+class="cmbx-10x-x-109">12pm Monday 11th</span>
+<span 
+class="cmbx-10x-x-109">December</span>. You will need to submit via Turnitin, via the Ultra page. I <span 
+class="cmbx-10x-x-109">strongly</span>
+<span 
+class="cmbx-10x-x-109">recommend </span>submitting at least a few hours ahead of the deadline, in case
+of technical issues. Only one member of the group should submit the
+report.
+<!--l. 43--><p class="noindent" >There will also be a presentation component to this work, instructions for
+which have been released separately. The report itself is worth 20% of
+your mark for the module, with the presentation worth an additional
+15%.
+<h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-10001"></a>Introduction</h3>
+<!--l. 47--><p class="noindent" >People, by and large, want to be happy.
+<!--l. 49--><p class="noindent" >Every year, data is collected to allow the countries of the world to be placed on a
+&#8220;happiness ladder&#8221;. The higher on the ladder a country is, the more happy the
+population of that country are on average. The ladder score is calculated by
+asking 1000 people in the country to rate their happiness between 0 and
+10.
+<!--l. 51--><p class="noindent" >The data presented with this assignment represent an adaptation of the 2023
+data. 137 countries (for perhaps a broad definition of the term &#8220;country&#8221;) are
+represented. The value <span 
+class="cmtt-10x-x-109">ladder score </span>tells us how happy the population of a
+country are on average.
+<!--l. 53--><p class="noindent" >There are any number of variables that might affect the level of happiness within
+a country. In this data set, we concentrate on six. These six variables are given in
+Table 1, along with a description of the type of variable they are, and a brief
+summary of what they represent.
+<div class="table">
+
+<!--l. 58--><p class="noindent" ><a 
+ id="x1-10011"></a><hr class="float"><div class="float" 
+>
+
+<!--tex4ht:inline--><div class="tabular"><table id="TBL-1" class="tabular" 
+ 
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2"></colgroup><colgroup id="TBL-1-3g"><col 
+id="TBL-1-3"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-1-1"  
+class="td11"><span 
+class="cmbx-10x-x-109">Variable </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-1-2"  
+class="td11"><span 
+class="cmbx-10x-x-109">Type      </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-1-3"  
+class="td11"><span 
+class="cmbx-10x-x-109">Description                                                                   </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-2-1"  
+class="td11">LGPD      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-2-2"  
+class="td11">Continuous</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-2-3"  
+class="td11">Natural logarithmic value of Gross Domestic Product                        </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-3-1"  
+class="td11">Support    </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-3-2"  
+class="td11">Continuous</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-3-3"  
+class="td11">Proportion of respondents answering &#8220;Yes&#8221;                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-1"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-2"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-3"  
+class="td11">to question &#8220;If you were in trouble, do you have relatives or friends      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-1"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-2"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-3"  
+class="td11">you can count on to help you whenever you need them, or not?&#8221;          </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-6-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-1"  
+class="td11">HLE        </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-2"  
+class="td11">Continuous</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-3"  
+class="td11">Healthy Life Expectancy - how long a person                                   </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-7-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-7-1"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-7-2"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-7-3"  
+class="td11">is expected to live absent accidents or chronic medical conditions         </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-8-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-8-1"  
+class="td11">Freedom   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-8-2"  
+class="td11">Continuous</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-8-3"  
+class="td11">Proportion of respondents answering &#8220;Yes&#8221;                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-9-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-9-1"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-9-2"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-9-3"  
+class="td11">to question &#8220;Are you satisfied with your freedom                              </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-10-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-10-1"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-10-2"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-10-3"  
+class="td11">to choose what you do with your life?&#8221;                                           </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-11-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-11-1"  
+class="td11">Corruption</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-11-2"  
+class="td11">Continuous</td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-11-3"  
+class="td11">Mean of proportion of respondents answering yes to questions             </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-12-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-12-1"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-12-2"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-12-3"  
+class="td11">&#8220;Is corruption widespread throughout the government in this country?&#8221;</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-13-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-13-1"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-13-2"  
+class="td11">         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-13-3"  
+class="td11">and &#8220;Is corruption widespread within businesses in this country?&#8221;        </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-14-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-14-1"  
+class="td11">Continent  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-14-2"  
+class="td11">Nominal    </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-14-3"  
+class="td11">Continent the country is (usually) placed within                               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-15-"><td  style="white-space:nowrap; text-align:left;" id="TBL-1-15-1"  
+class="td11">         </td></tr></table></div>
+<br /> <div class="caption" 
+><span class="id">Table&#x00A0;1: </span><span  
+class="content">Predictor Variables</span></div><!--tex4ht:label?: x1-10011 -->
+
+</div><hr class="endfloat" />
+</div>
+<!--l. 88--><p class="noindent" >We assume in this assignment that national governments would rather their
+citizenry were happy, all else being equal.
+<h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-20002"></a>Assignment</h3>
+<!--l. 92--><p class="noindent" >Imagine your group has been hired by a national government. This government is
+very keen to see the happiness level of its population rise over the next
+decade. They want to know where to focus their efforts in order to do just
+that.
+<!--l. 94--><p class="noindent" >You are to use the data in the file <span 
+class="cmtt-10x-x-109">Happy.csv </span>to write a report which gives
+accessible information to government officials regarding which independent
+variables seem most closely related with happiness ladder score. Your work
+should draw upon both descriptive statistics, and a multivariate linear regression
+model (which we will cover in Week 7), using the variable <span 
+class="cmtt-10x-x-109">Ladder</span><span 
+class="cmtt-10x-x-109">_score </span>as
+the response variable. During the writing of your report, you should
+consider
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 96--><p class="noindent" >Are there outliers/extreme values in the data, and if so, what should
+     be done with them?
+     </li>
+     <li class="itemize">
+     <!--l. 97--><p class="noindent" >What statistical values/diagrams could best support any points you
+     wish to make?
+     </li>
+     <li class="itemize">
+     <!--l. 98--><p class="noindent" >Is your multivariate linear regression model performing well? (<span 
+class="cmbx-10x-x-109">Note</span>:
+     we will cover additional ways to check this in Week 8)
+     </li>
+     <li class="itemize">
+     <!--l. 99--><p class="noindent" >Is  your  multivariate  linear  regression  model  plausibly  meeting  the
+     assumptions needed for such a model?</li></ul>
+<!--l. 101--><p class="noindent" >(<span 
+class="cmbx-10x-x-109">Note: </span>the above list is not intended to include all considerations you should
+bear in mind).
+
+<!--l. 103--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-30003"></a>Report</h3>
+<!--l. 105--><p class="noindent" >The report you write should be divided into four sections.
+<!--l. 107--><p class="noindent" >
+     <ol  class="enumerate1" >
+<li 
+  class="enumerate" id="x1-3002x1">
+     <!--l. 109--><p class="noindent" >A  one  page  executive  summary,  allowing  a  <span 
+class="cmbx-10x-x-109">non  statistician  </span>to
+     understand the results you have presented. Any recommendations for
+     future governmental policy should be given here, in bullet point form.
+     </li>
+<li 
+  class="enumerate" id="x1-3004x2">
+     <!--l. 111--><p class="noindent" >Findings (max 3 pages, including figures and tables).
+     <!--l. 113--><p class="noindent" >This section should contain descriptions of your main findings and
+     recommendations for the future, as you would present them to senior
+     government officials who will be tasked with carrying out the work you
+     recommend. These officials will not be statisticians, so keep statistical
+     jargon to a minimum, and use figures or tables to support your findings
+     and recommendations.
+     <!--l. 115--><p class="noindent" >This  section&#8217;s  aim  is  to  provide  the  officials  with  an  overview  of
+     what you found, to persuade them your recommendations are worth
+     following. You should also summarise any limitations of your approach,
+     and of the data used. Honest and constructive criticism will be valuable
+     when these governmental officials write their own reports at a later
+     date regarding the overall project of increasing national happiness.
+     </li>
+<li 
+  class="enumerate" id="x1-3006x3">
+     <!--l. 117--><p class="noindent" >Statistical methodology (max 6 pages, including figures and tables).
+     <!--l. 119--><p class="noindent" >This is a section written for other data scientists who may wish to
+     check your work, or build on it themselves. You should describe here
+     the methods you used in statistical language. This description should
+     include any changes you made to the data, any decisions you made on
+     variables to exclude or transform, how you assessed the performance
+     of your model, and how you performed residual diagnostics on your
+     model.
+     <!--l. 122--><p class="noindent" >A major goal of this section is to provide other data scientists with
+     enough information that, should they wish to, they could completely
+     reproduce your results.
+
+     </li>
+<li 
+  class="enumerate" id="x1-3008x4">
+     <!--l. 124--><p class="noindent" >Appendix (max 3 pages, including figures and tables).
+     <!--l. 126--><p class="noindent" >Here you should include any annotated <span 
+class="cmtt-10x-x-109">R </span>code and any additional
+     figures or results supporting statements in Sections (1) and (2) but
+     not included there. Do <span 
+class="cmbx-10x-x-109">not </span>put <span 
+class="cmtt-10x-x-109">R </span>code in Sections (1)-(2)
+     </li></ol>
+<!--l. 132--><p class="noindent" >Note that the above page counts are strict - you will lose marks if you go over the
+page count in any section. The page counts are also deliberately quite
+low. This is to get you to think very carefully about what information
+does and does not truly <span 
+class="cmbx-10x-x-109">need </span>to be included in your report. We are
+imagining you are handing this report to people who will be extremely busy
+indeed!
+<!--l. 134--><p class="noindent" >You will also need to produce a presentation of your results, as detailed in the
+presentation assignment.
+<!--l. 136--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-40004"></a>Mark Scheme</h3>
+<!--l. 138--><p class="noindent" >The report will be marked out of 20. The marking criteria for the report is given
+in Table 2, and is adapted from the university&#8217;s marking criteria.
+<div class="table">
+
+<!--l. 142--><p class="noindent" ><a 
+ id="x1-40012"></a><hr class="float"><div class="float" 
+>
+
+<div class="tabular"> <table id="TBL-2" class="tabular" 
+ 
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1"></colgroup><colgroup id="TBL-2-2g"><col 
+id="TBL-2-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-1"  
+class="td11"><span 
+class="cmbx-10x-x-109">Mark</span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-1-2"  
+class="td11"><span 
+class="cmbx-10x-x-109">Criteria                                                                          </span></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-1"  
+class="td11"> 18-20 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-2-2"  
+class="td11">The report is exemplary, providing clear evidence of a complete</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-2"  
+class="td11">grasp of both the statistical methods employed, and their                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-2"  
+class="td11">interpretation in the given context. The report is exceptionally               </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-2"  
+class="td11">well-designed, concisely offering relevant information and strong             </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-2"  
+class="td11">commentary at all points. The English used is faultless.                        </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-7-1"  
+class="td11"> 15-17 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-2"  
+class="td11">The report is excellent, providing strong evidence of a complete             </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-8-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-8-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-2"  
+class="td11">grasp of the statistical methods employed, along with a thorough           </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-9-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-9-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-2"  
+class="td11">understanding of how to interpret them in the given context.                 </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-10-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-10-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-10-2"  
+class="td11">The report is very well-designed, frequently offering relevant                  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-11-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-11-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-11-2"  
+class="td11">information and strong commentary. The English used is very strong.      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-12-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-12-1"  
+class="td11"> 13-14 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-12-2"  
+class="td11">The report is good, providing evidence of a strong grasp of                    </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-13-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-13-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-13-2"  
+class="td11">the statistical methods employed, along with some understanding           </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-14-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-14-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-14-2"  
+class="td11">of how to interpret them in the given context. The report is                  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-15-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-15-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-15-2"  
+class="td11">well-designed, offering relevant information and satisfactory                   </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-16-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-16-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-16-2"  
+class="td11">commentary. The English used is good.                                             </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-17-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-17-1"  
+class="td11"> 11-12 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-17-2"  
+class="td11">The report is acceptable, and provides evidence of a reasonable              </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-18-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-18-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-18-2"  
+class="td11">grasp of the statistical methods employed, although with limited            </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-19-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-19-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-19-2"  
+class="td11">evidence of an ability to interpret them in context. The report               </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-20-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-20-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-20-2"  
+class="td11">is acceptable in design, though some information is not relevant, or         </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-21-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-21-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-21-2"  
+class="td11">is inappropriately placed. There are some flaws in the English used.        </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-22-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-22-1"  
+class="td11"> 8-10  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-22-2"  
+class="td11">The report contains insufficient evidence of a reasonable grasp of the       </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-23-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-23-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-23-2"  
+class="td11">statistical methods employed, although there is some evidence present.    </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-24-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-24-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-24-2"  
+class="td11">The context of the data is under-served or presented inaccurately. The    </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-25-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-25-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-25-2"  
+class="td11">report is flawed in design, with limited examples of relevant information.  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-26-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-26-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-26-2"  
+class="td11">The English used is flawed, and sometimes poor.                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-27-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-27-1"  
+class="td11">  6-7   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-27-2"  
+class="td11">The report is unacceptable, containing little evidence of a reasonable       </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-28-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-28-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-28-2"  
+class="td11">grasp of the statistical methods employed. The context of the data is      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-29-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-29-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-29-2"  
+class="td11">under-served or presented inaccurately. The report is badly flawed in       </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-30-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-30-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-30-2"  
+class="td11">design, difficult to read and with limited examples of relevant information</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-31-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-31-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-31-2"  
+class="td11">and numerous errors. The English used is often poor.                           </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-32-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-32-1"  
+class="td11">  3-5   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-32-2"  
+class="td11">The report is unacceptable, containing little evidence of a reasonable       </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-33-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-33-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-33-2"  
+class="td11">grasp of the statistical methods employed. The context of the data is      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-34-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-34-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-34-2"  
+class="td11">ignored or presented with major errors. The report is extremely badly     </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-35-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-35-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-35-2"  
+class="td11">flawed in design, extremely difficult to read and with almost no              </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-36-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-36-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-36-2"  
+class="td11">examples of relevant information and numerous serious errors. The         </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-37-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-37-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-37-2"  
+class="td11">English used is very poor.                                                               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-38-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-38-1"  
+class="td11">  0-2   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-38-2"  
+class="td11">The report is completely unacceptable, containing no evidence of any      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-39-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-39-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-39-2"  
+class="td11">grasp of the statistical methods employed. The context of the data is      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-40-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-40-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-40-2"  
+class="td11">ignored or presented without any accuracy. The report is exceptionally    </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-41-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-41-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-41-2"  
+class="td11">badly flawed in design, almost impossible to read and with no examples   </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-42-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-42-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-42-2"  
+class="td11">of relevant information, and with numerous serious errors. The English    </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-43-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-43-1"  
+class="td11">      </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-43-2"  
+class="td11">used is essentially unreadable.                                                          </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-44-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-44-1"  
+class="td11">      </td></tr></table></div>
+<br /> <div class="caption" 
+><span class="id">Table&#x00A0;2: </span><span  
+class="content">Marking criteria</span></div><!--tex4ht:label?: x1-40012 -->
+
+</div><hr class="endfloat" />
+</div>
+ 
+</body></html> 
+
+
+

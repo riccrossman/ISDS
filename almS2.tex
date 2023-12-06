@@ -1,0 +1,201 @@
+% two new environments for LaTeX
+%
+% Bayesian Statistics III/IV Michaelmas 2006, JE.
+%
+% aufgabe - for exercises
+% loesung - for solutions
+%
+% usage:   put a \input{envi.tex} statement in the header of your
+%          LaTeX-document, and then simply:
+%
+%          \begin{question} text... \end{question}
+%    or    \begin{solution} text... \end{solution}
+\usepackage{amsmath,amsthm}
+\usepackage{amsfonts}
+\usepackage{color}
+\usepackage{colordvi}
+%\usepackage{defs}
+\fboxsep.3cm
+\newlength{\breite}
+\breite\textwidth
+\addtolength{\breite}{-21.78842pt}
+
+\newcommand{\reell}{{\rm I\hspace{-0.08cm} R}}
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+\newcommand{\e}{\epsilon}
+\newcommand{\var}{\mbox{Var}}
+\newcommand{\hvb}{\hat{\v \beta}}
+\newcommand{\tZ}{\tilde{\v Z}}
+%\newcommand{\R}{\textsf{R} }
+
+% from Allan
+\renewcommand{\v}[1]{\boldsymbol{#1}}
+\newcommand{\hvS}{\hat{\v \Sigma}}
+\newcommand{\Hmwk}{[{\bf Hand in to be marked}]\;}
+
+
+%\newcommand{\laspace}{\;}
+%\newcommand{\mespace}{\:}
+%\newcommand{\smspace}{\,}
+%\newcommand{\intspace}{\mespace}
+%\newcommand{\isp}{\intspace}
+
+%\newcommand{\eg}{{\em e.g.\ }}
+%\newcommand{\ie}{{\em i.e.\ }}
+%\newcommand{\cf}{{\em cf.\ }}
+%\newcommand{\etal}{{\em et al.\ }}
+%\newcommand{\etalnodotnospace}{{\em et al}}
+%\newcommand{\eqcomma}{\laspace,}
+%\newcommand{\eqstop}{\laspace.}
+%\newcommand{\eqsemi}{\laspace;}
+%\newcommand{\eqquestion}{\laspace?}
+%\newcommand{\noi}{\noindent}
+%\newcommand{\real}{{\mathbb R}}
+
+
+\newcounter{aufg}[section]
+\newenvironment{question}%
+  {\refstepcounter{aufg}\noindent\textbf{Question \arabic{section}.\arabic{aufg}:}
+   \\*[1ex]\noindent}{\vspace{.5cm}}
+
+\newenvironment{questandremark}[1]%
+  {\refstepcounter{aufg}\noindent\textbf{Question \arabic{section}.\arabic{aufg}: #1}
+   \\*[1ex]\noindent}{\vspace{.5cm}}
+
+\newenvironment{questandremarkCC}[1]%
+  {\refstepcounter{aufg}\noindent\textbf{Question \arabic{section}.\arabic{aufg}CC: #1}
+   \\*[1ex]\noindent}{\vspace{.5cm}}
+
+
+
+\newcommand{\mathead}[2]%
+{\hrule
+\vspace{.15cm}
+\begin{minipage}{\textwidth}
+\textsf{\textbf{Introduction To Statistics For Data Science \hfill
+Handout  #1\\
+Dr. Ric Crossman\hfill #2
+}}%
+\end{minipage}
+\vspace{.05cm}
+\hrule}
+
+\newcommand{\head}[2]%
+{\hrule \vspace{.15cm} \noindent\textsf{\textbf{Introduction To Statistics For Data Science}}\hfill
+\textsf{\textbf{Workshop #1}}\\
+\textsf{\textbf{Dr. Ric Crossman}}\hfill \textsf{\textbf{#2}}
+%\textsf{\textbf{Dr. Ian Jermyn}}\hfill \textsf{\textbf{#2}}
+\vspace{.2cm}
+\hrule
+
+\vspace{1cm}
+
+}
+
+\newcommand{\lshead}[2]%
+{\hrule \vspace{.15cm} \noindent\textsf{\textbf{Introduction To Statistics For Data Science}}\hfill
+\textsf{\textbf{Solutions to Sheet #1}}\\
+%\textsf{\textbf{Dr. Ian Jermyn}}\hfill \textsf{\textbf{#2}}
+\textsf{\textbf{Dr. Ric Crossman}}\hfill \textsf{\textbf{#2}}
+\vspace{.2cm}
+\hrule
+
+\vspace{1cm}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Aufgabenumgebung NEU %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcounter{auf}
+\newenvironment{auf}%
+{\refstepcounter{auf}
+\begin{center}
+\fcolorbox[gray]{0}{.95}{
+\makebox[\breite]{
+%\framebox[\textwidth]{
+\textbf{Question \arabic{auf}}
+%}\\*[1ex]\noindent
+}}\\*[1ex]\noindent
+\end{center}
+}{\vspace{.5cm}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nur ein kleiner Test... %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcounter{loes}[section]
+\newenvironment{solution}%
+{\stepcounter{loes}
+\begin{center}
+\fcolorbox[gray]{0}{.95}{
+\makebox[\breite]{
+\textbf{Solution \arabic{section}.\arabic{loes}}
+}}\\*[1ex]\noindent
+\end{center}
+}{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Noch ein kleiner Test... %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newenvironment{material}[1]%
+{\begin{center}
+\fcolorbox[gray]{0}{.95}{
+\makebox[\breite]{
+\textbf{To question #1}
+}}\\*[1ex]\noindent
+\end{center}\vspace{1cm}
+}{\vspace{1cm}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Noch ein kleiner Test... %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%f�r ins Netz gestellte L�sungen
+
+\newenvironment{ls}[1]%
+{\begin{center}
+\fcolorbox[gray]{0}{.95}{
+\makebox[\breite]{
+\textbf{Solution of Question #1}
+}}\\*[1ex]\noindent
+\end{center}\vspace{1cm}
+}{\vspace{1cm}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Und noch ein kleiner Test... %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Aufgabenumgebung f�r Klausuren, nummeriert die Aufgaben und �bernimmt Punktezahlen...
+
+\newcounter{ka}
+\newenvironment{ka}[1]% %Parameter = Punktezahl der Aufgabe
+{\refstepcounter{ka}
+{\it Name:..................................., Matrikelnummer:....................................}
+\begin{center}
+\framebox[\textwidth]{
+\textbf{Question \arabic{ka}} \hfill #1 grades
+}\\*[1ex]\noindent
+\end{center}
+%\vspace{\fboxsep}
+}{\vspace{1cm}}
+
+
+\newcounter{lka}
+\newenvironment{lka}[1]% %Parameter = Punktezahl der Aufgabe
+{\refstepcounter{lka}
+\begin{center}
+\framebox[\textwidth]{
+\textbf{L\"osung \arabic{lka}} \hfill #1 grades
+}\\*[1ex]\noindent
+\end{center}
+%\vspace{\fboxsep}
+}{\vspace{1cm}}
+
+% that's it.

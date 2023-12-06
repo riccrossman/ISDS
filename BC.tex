@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+
+%\input{symbols.tex}
+\usepackage{amssymb}
+\usepackage{german}
+\usepackage{rawfonts}
+\usepackage[dvips]{epsfig}
+%\usepackage[dvips]{graphicx}
+%\usepackage[pdftex]{graphicx}
+\sloppy
+\parindent0em
+\parskip0.2em
+%\topmargin-1.3 cm
+%\textheight26cm
+%\textwidth16.8cm
+%%\oddsidemargin-0.5cm
+%\oddsidemargin-1.5cm
+
+\pagestyle{empty}
+
+%\include{prepictex}
+%\include{pictex}
+%\include{postpictex}
+
+\font \sfbold=cmssbx10
+
+ 
+
+\begin{document}
+ 
+\textbf{The Binomial Coefficient}
+\vspace{0.2cm}
+
+One of the ideas introduced in the Week 3 videos is the binomial coefficient. I said in Video 3.3 that I would explain how these values work in a separate place, since you don't technically need to know how they work in order to make use of them.
+
+\vspace{0.1cm}
+That said, I do think the way they work is quite interesting, hence this document that you're reading now!
+
+\vspace{0.1cm}
+A quick reminder of how we used binomial coefficients. This was in the context of a binomial distribution. The binomial distribution has two parameters $p$ and $n$, and represents the number of trials, out of $n$, that have been in some way ``successful''. The assumptions we need in order to use the binomial distribution are:
+\begin{enumerate}
+\item Each trial either succeeds or fails;
+\item Each trial has the same probability $p$ of success;
+\item Each trial result is independent of all other trials.
+\end{enumerate}
+
+Under these assumptions, we went through how the probability of getting $x$ sucesses and $n-x$ failures in our series of $n$ trials must equal the probability of getting $x$ successes in a row followed by $n-x$ failures in a row, multiplied by the number of different ways you can actually order $x$ successful trials and $n-x$ failed trials. For example, if I toss a coin, which has probability $p$ the coin lands heads-side up, then the probability I get two heads and one tails in three tosses equals the probability of getting two heads then one tails $(p\times p \times (1-p))$, multiplied by the number of ways we can get two heads and one tails in three tosses. There are three such combinations, HHT, HTH, THH, so the overall probability is $3p^2(1-p)$.
+\vspace{0.1cm}
+
+The binomial coefficient gives us the number of different ways we can arrange $x$ successes and $n-x$ failures into a sequence of lengh $n$. The way it does this is quite simple, but quite clever. First of all, how many ways are there of arranging $n$ \textbf{different} objects in a sequence? Well, we have n choices for the object starting the sequence, and $n-1$ choices for the second object. This means we have $n\times (n-1)$ possibilities for what the first two objects in the sequence can be; each of the $n$ choices for what comes first then gives us $n-1$ choices for what comes second. Note that here we are assuming that swapping round the first two objects crates a new possible beginning - we'll come back to this very soon.
+\vspace{0.1cm}
+
+By extending this logic, we have that there $n\times (n-1) \times (n-2)$ possibilities for the first three objects in the sequence, and so on. We keep on making choices from the objects left, until eventually we have 2 choices for the penultimate object, and only 1 choice for what comes last. Overall, then, the number of ways we can order $n$ different objects is $n\times(n-1)\times(n-2)\times\ldots\times2\times1$, which we've described before as $n$ factorial, denoted $n!$.
+\vspace{0.1cm}
+
+That's how many ways we can arrange $n$ different objects, then. That, though, isn't the situation we're in. We don't have $n$ different objects, we have one set of $x$ identical objects, and a second set of $n-x$ identical objects. We've just seen there are $x!$ different ways to arrange $x$ objects, but all of them would be the same in this case. That's not a problem, though. We know we have $n!$ combinations of objects, but that we can divide those combinations into groups of size $x!$, where each of the combinations in the group is actually identical, because they differ only in which successes go where, and all successes are the same.
+\vspace{0.1cm}
+
+If we divide $n!$ by $x!$, then, we get the actual number of orderings of our $n!$ objects which are actually \textbf{different} in terms of the placement of successes.
+
+\vspace{0.1cm}
+
+We can then make exactly the same argument for the failures. There are $n-x$ of those, each of them identical, so we can divide our orderings into groups of size $(n-x)!$, with each ordering in a group having the same placement of failures.
+\vspace{0.1cm}
+
+Overall, then, we find the number of actually distinct orderings of $x$ successes and $n-x$ failures by taking $n!$ and dividing it by both $x!$ and $(n-x)!$. But that is precisely how I defined the binomial coefficient:
+
+\begin{eqnarray*}
+{n\choose x}=\frac{n!}{x!(n-x)!}
+\end{eqnarray*}
+
+And there you have it: why the binomial coefficient has the definition it does. If you want to learn more about binomial coefficients, you can look up what is commonly known as ``Pascal's triangle'', which uses a triangular structure to build up successive rows of binomial coefficients. Alternatively/additionally, look up Al-Karaji, the Persian mathematician who first wrote down what we now call ``Pascal's triangle'', more than 600 years before Pascal was born!
+
+\end{document}

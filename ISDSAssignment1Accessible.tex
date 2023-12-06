@@ -1,0 +1,166 @@
+\documentclass[11pt,a4paper]{article}
+
+%\input{symbols.tex}
+\usepackage{amssymb}
+\usepackage{german}
+\usepackage{rawfonts}
+\usepackage[dvips]{epsfig}
+%\usepackage[dvips]{graphicx}
+%\usepackage[pdftex]{graphicx}
+\sloppy
+\parindent0em
+\parskip0.2em
+%\topmargin-1.3 cm
+%\textheight26cm
+%\textwidth16.8cm
+%%\oddsidemargin-0.5cm
+%\oddsidemargin-1.5cm
+
+\pagestyle{empty}
+
+%\include{prepictex}
+%\include{pictex}
+%\include{postpictex}
+
+\font \sfbold=cmssbx10
+
+
+\input{almS2}
+
+\begin{document}
+
+\head{1}{}
+
+\setcounter{section}{1}
+
+\setcounter{aufg}{0}
+
+%\rule{\textwidth}{0.03cm}
+%\parskip0.6cm
+
+The submission deadline for this assignment is \textbf{12pm Monday 23rd October}. You will need to submit via Gradescope, via the Ultra page. I \textbf{strongly recommend} submitting at least a few hours ahead of the deadline, in case of technical issues.
+
+Each of the four questions carries similar but not identical weight.
+
+
+
+\vspace{0.2cm}
+
+\textbf{Question 1}
+
+\vspace{0.2cm}
+
+
+A series of multiple choice questions.
+\begin{enumerate}
+\item A short e-survey is released, asking the following question: ``How many cups of tea do you drink a day?''. The available answers were ``0'', ``1'', ``2``, and ``3 or more''.
+
+What type of data is the e-survey collecting?
+
+\begin{enumerate}
+\item Nominal
+\item Ordinal
+\item Discrete
+\item Continuous
+\end{enumerate}
+
+
+
+
+\item Data is collected relating to the continent of origin of students at Durham. The data is to be shown graphically to the University Council, to help them understand where students come from most often, and least often.
+
+Council will want to compare numbers between continents - they are not interested in the proportion each continent of origin makes up of the whole of the student body. Which of the following graphs would be the best method for displaying this data?
+
+\begin{enumerate}
+\item Bar chart
+\item Pie chart
+\item Histogram
+\item Stem and leaf diagram
+\end{enumerate}
+
+
+
+\item In a recent survey, 46\% of the British population said they preferred dogs to cats. In another recent survey, 12\% of the British population listed jazz as one of their favourite musical genres.
+
+Assume that whether a person prefers dogs to cats is independent of whether they consider jazz one of their favourite musical genres. What probability, expressed as a percentage, should we give to the event that a British person prefers dogs to cats \textbf{and} considers jazz one of their favourite musical genres.
+\begin{enumerate}
+\item $58\%$
+\item $5.52\%$
+\item $55.2\%$
+\item $5.80\%$
+\end{enumerate}
+
+\item Consider an outcome space $\Omega=\{1,8,15,35,69,732,983\}$. Let $A=\{1,8,69,983\}$ and let $B=\{1,8,15,35,69\}$.
+
+Assuming a uniform probability distribution on $\Omega$, which of these is the probability that $A$ AND $B$ occur?
+
+\begin{enumerate}
+\item $\frac{3}{7}$
+\item $\frac{4}{7}$
+\item $\frac{5}{7}$
+\item $\frac{6}{7}$
+\end{enumerate}
+
+\item A random variable U is defined with the probability density function below:
+\begin{eqnarray*}
+f(u)=\begin{cases} 
+      \frac{u}{2} & 0\leq u \leq 2 \\
+      0 & \text{otherwise}
+   \end{cases}.
+\end{eqnarray*}
+
+Which of the following is the value of $P(U>0.30)$?
+
+\begin{enumerate}
+\item $0.09775$
+\item $0.03$
+\item $0.70$
+\item $0.9775$
+\end{enumerate}
+\end{enumerate}
+ 
+
+\textbf{Question 2}
+\vspace{0.2cm}
+
+Using the \texttt{ToothGrowth} data set in \texttt{R}:
+\begin{enumerate}
+\item Find the modal tooth length across the entire data set.
+\item Find the mean tooth length for guinea pigs who were given their vitamins via orange juice.
+\item Create a diagram in \texttt{R} of two box-and-whisker plots, one showing tooth length for guinea pigs given their vitamins via asorbic acid, and one showing tooth length for guinea pigs given their vitamins via orange juice. The box-and-whisker plots should be adjacent to each other, using the same axis, to enable easy comparison.
+\item Using the box-and-whisker plots created in Question 1.2.3, comment on which of the two vitamin delivery approaches is more effective in promoting tooth growth. Justify your answer.
+\end{enumerate}
+
+ 
+\textbf{Question 3}
+\vspace{0.2cm}
+
+A company that produces party poppers claims on their website that only 0.6\% of their party poppers will fail to go off when the string is pulled.
+\begin{enumerate}
+\item The company sells party poppers in boxes of 200. What is the expected number of party poppers which will fail to go off in a box?
+\item I decide I want to represent the number of party poppers which fail to go off in a box using a random variable, $X$.
+\begin{enumerate}
+\item Which distribution would be the most appropriate to use for $X$? Give both the name of the distribution, and the value of the parameters assuming the company's claim on their website is correct.
+\item What assumptions regarding the party poppers would need to hold in order to justify that choice of distribution?
+\end{enumerate}
+\item I order a box for myself, but due to an administrative error, the box arrives containing not 200 party poppers, but 2.
+\begin{enumerate}
+\item Define the distribution for $Y$, the random variable representing the number of party poppers which fail to go off in my box of 2, assuming the claim on the company's website is correct.
+\item Find $E(Y)$ and $\textrm{Var}(Y)$, under the assumptions needed for Question 1.3.2 b), and under the assumption that the claim on the company's website is correct. NOTE: You will need to show your working.
+\end{enumerate}
+\end{enumerate}
+
+
+
+\textbf{Part D}
+\vspace{0.2cm}
+
+
+Let $X\sim Pois(0.4)$, and let $Y\sim Pois(\lambda)$. Find:
+\begin{enumerate}
+\item $P(X=4)$.
+\item $P(X<3)$. NOTE: You will need to show your working.
+\item An algebraic expression for $P(Y=4|Y\geq3)$. NOTE: You will need your working.
+\end{enumerate} 
+
+\end{document}

@@ -1,0 +1,213 @@
+\documentclass[11pt,a4paper]{article}
+
+%\input{symbols.tex}
+\usepackage{amssymb}
+\usepackage{german}
+\usepackage{rawfonts}
+\usepackage[dvips]{epsfig}
+%\usepackage[dvips]{graphicx} 
+%\usepackage[pdftex]{graphicx}
+\sloppy
+\parindent0em
+\parskip0.2em
+%\topmargin-1.3 cm
+%\textheight26cm
+%\textwidth16.8cm
+%%\oddsidemargin-0.5cm
+%\oddsidemargin-1.5cm
+
+\pagestyle{empty}
+
+%\include{prepictex}
+%\include{pictex}
+%\include{postpictex}
+
+\font \sfbold=cmssbx10
+
+
+\input{ISDS/almS2}
+
+\begin{document}
+
+\head{1}{}
+
+\setcounter{section}{1}
+
+\setcounter{aufg}{0}
+
+%\rule{\textwidth}{0.03cm}
+%\parskip0.6cm
+
+This worksheet is designed to get you used to using \texttt{R} and \texttt{RStudio}. There will be additional, similar worksheets in later workshops.
+
+We're going to be asking you to do things that you (very likely) don't yet know how to do with \texttt{R}. Learning a new programming language can be tricky, particularly for any of you for whom this is your \textbf{first} programming language. You have to get used to not only thinking carefully about not just what you want your computer to do, but the language you need to use in order to ask the computer to do it.
+
+For some of you, this is familiar territory. For others, it might be quite new. Don't forget that there are multiple staff members in the room with you, ready to help you start making sense of \texttt{R}. Just as no-one would expect you to speak a new language fluently after your first lesson, we're not expecting you to master \texttt{R} in this first workshop. Don't be afraid to try things, and don't be discouraged when (at least) some of them don't work out.
+
+\vspace{0.4cm}
+
+\textbf{Part I: The Basics Of \texttt{R}}
+\begin{enumerate} 
+\item Step 1 is to load \texttt{RStudio}. How to download and install this program was covered in Video 1.1. If you are using a machine borrowed from Durham University, remember you need to load up \texttt{AppsAnywhere}, and select RStudio. The most recent version of \texttt{RStudio} currently available on \texttt{AppsAnywhere} is \texttt{RStudio 2023 with RStan and Rtools}. Click on ``Launch Laptop'' to start RStudio.
+
+We will start off using the \texttt{console} window - this should be in the bottom-left of your screen when running \texttt{RStudio}. This console window is the only thing you see at first when loading up \texttt{R} on its own.
+
+We can use the console window to directly input commands into R, writing our commands beside the blue ``greater than'' sign, and hitting Enter each time we want to give \texttt{R} a command. I will refer to the ``greater than'' sign as the \textbf{command prompt} from this point on.
+
+\item Provided you are online, there are several ways you can get assistance in \texttt{R} if you are stuck. Typing \texttt{help.start()} into the command prompt and pressing Enter will bring up a series of manuals for \texttt{R} that you can look at. I recommend reading through ``An Introduction To \texttt{R}''.
+
+You might not find that \textbf{too} helpful, of course, if you have a specific question. With so much information on offer, finding what you actually need can be quite daunting. If you want help with, say, a specific function, you can request the help file for that function. To do this, type a question mark followed by the name of the function into the command prompt, and press Enter. For instance, if you're not sure how to use the \texttt{sqrt} function, type \texttt{?sqrt} into the command prompt, and press Enter. Try it now. (You can achieve the same effect by typing in \texttt{help(sqrt)}.)
+
+Even the help files can sometimes not be so helpful; it takes time to learn how to read them. Often though they have an example at the bottom which you can play around with without reading the rest of the file.
+
+\item R is capable of performing basic arithmetic, using the operations \texttt{+,-,/,*}. Try using each of these to calculate a value. Do they work the way you expect? You can use \texttt{\^} to calculate powers, as well.
+
+\item One of the most fundamental tasks in \texttt{R} is to assign a \textbf{value} to a \textbf{variable}, so you can use that value in functions, graphs, etc.
+
+Let's assign the value 3 to a variable named \texttt{Steve}. To do this, you can enter \texttt{Steve<-3} or \texttt{3->Steve}. Alternatively, you can enter \texttt{Steve=3}. I recommend though that you \textbf{don't} assign values that way. In \texttt{R}, the commands ``='' and ``=='' have very different meanings, and it's easy to accidentally use the wrong one, and cause yourself problems.
+
+Try performing arithmetic using Steve. What values would you expect to get from typing in:
+\begin{enumerate}
+\item \texttt{Steve+3}?
+\item \texttt{1/Steve}?
+\item \texttt{Steve}\texttt{\^}\texttt{3-Steve*2}?
+\end{enumerate}
+
+Did you get the values you expected?
+\item Use the \texttt{ls} \emph{function} to obtain a \emph{list} of the variables defined in your \textbf{workspace}. What \texttt{R} shows you in response will depend on how much you've been using \texttt{R} already, but you should at least see \texttt{Steve} listed, since you have defined this as a variable. If you want to be rid of Steve, type \texttt{rm(Steve)} and press Enter. Try this now, and use the \texttt{ls} function to confirm Steve is gone.
+
+Remember you can use \texttt{help(ls)} to find out how this command works.
+ 
+
+\item Using the command prompt has its disadvantages. If you accidentally hit Enter partway through writing a command, you can spoil what you were trying to get \texttt{R} to do. If you are entering complex code line by line, and make a mistake, you might have to start from the very beginning. There are ways to mitigate this - you can use the up and down keys to move between previous inputs, and make changes to an input - but it can be a real pain to correct mistakes even so.
+
+One way to solve this problem is to use the \texttt{R Script} window, at the top left of the \texttt{RStudio} display. This window lets you write as many lines of code as you like at once, with Enter being used not to input commands, but to provide a break that will be \textbf{interpreted} as pressing Enter later on.
+
+To input code from the \texttt{R Script} window to the \texttt{console} window, highlight the code and press \texttt{Run}, at the top-right of the \texttt{R Script} window. Everything you highlighted will be entered into the console, with line breaks interpreted as instances of pressing Enter.
+
+Load up the \texttt{D100000000} code from the Week 1 folder in the Ultra module page. Copy it into the \texttt{R Script} window. Highlight it and press \texttt{Run}. This will feed the whole of the code into \texttt{R} in one go, so you can start using the function immediately. Now, it's true that you could also just paste the code directly into the console with the same effect, but if there's just one error in the code, you would have to fix it, then paste the whole thing into the console again. It is much easier to find a mistake in the \texttt{R Script} window, fix it there, and then use \texttt{Run} to plug the new code in to \texttt{R}.
+
+\item Sometimes we might want to write a comment in our code, to remind us what a given line or section of code is doing (important hint: \textbf{never} assume you'll remember why you did something the way you did after a few weeks, or even days, have passed). Doing this in \texttt{RStudio} is extremely easy. Just write whatever you want to write, and stick a hash sign at the start.
+
+Try it now. Write a sentence in the \texttt{R Script} window and put a hash sign at the front. Notice what happens? Try running the sentence through the console, first without the hash sign, and then with it.
+
+\item Eventually, you'll want to stop using \texttt{RStudio} to do something else. You can save what you have in the \texttt{R Script} window by just going to \texttt{File} and choosing \texttt{Save As}, just as with many other programs.
+
+Note though that, depending on your settings, saving an \texttt{R} session in this way will \textbf{only} save what you've written in the \texttt{R Script} window. If you want to save the variables you've defined, and you want to save the inputs you've put into the console, you need to click on \texttt{Save All} instead. This will save three files:
+\begin{enumerate}
+    \item A .R file containing the \texttt{R Script} window (or more than one, if you've been working with multiple windows);
+    \item A .RData file, containing the variables you've defined;
+    \item A .txt file, containing the inputs you put through the console.
+\end{enumerate}
+So long as you save all three files in the same folder, loading up the .R file will automatically load the .Rdata and .txt files as well.
+
+\end{enumerate}
+
+\vspace{0.2cm}
+
+\textbf{Part 2: Functions} 
+
+  In this module, we're not going to be focusing on how to create your own functions in \texttt{R} - there are enough pre-created functions to keep us busy. That said, I do want to show you how you can make your own functions, as there are many situations in which writing something yourself is more practical than trying to find a function someone else has written that precisely matches your needs.
+
+The following code defines a simple \texttt{R} function, which checks whether the input it is given is precisely divisible by 5 or not.
+ 
+
+\texttt{test5<-function(n)\{}
+
+\texttt{if(n\%\%5==0)\{return(``Yes'')\}}
+
+\texttt{else\{return(``N'')\}}
+ 
+\texttt{\}}
+
+\begin{enumerate}
+
+\item Copy this function into your \texttt{R Script} window and use \texttt{Run} to enter it into the console. Try a few inputs to check the function is working as intended. \textbf{Note}: you will need to make sure the quote marks you enter into \texttt{R} \texttt{are} quote marks - if you copy and paste the text from this sheet, you may find the code won't work without replacing the quote marks.
+\item What role does \texttt{\%\%} play here? Can you rewrite the function so that it checks whether or not the input is precisely divisible by 7?
+\item What role does \texttt{==} play here? What does replacing it with \texttt{!=} do to the way the function operates? What does replacing it with \texttt{>} do to the way the function operates?
+\item (\textbf{Tricky!}) What role are \texttt{if} and \texttt{else} playing in the function? Can you rewrite the function in such a way that it checks first if the input is divisible by 5, and, if it isn't, then check if the answer is divisible by 7? \textbf{Hint:} There's nothing stopping you from using \texttt{if} more than once in a function.
+
+\end{enumerate}
+
+\textbf{Important Note:} I have used the function \texttt{return} above to generate the output of the function \texttt{test5}. It is also possible to use the \texttt{print} function to do something similar. In general, this is something to avoid, however, since \texttt{return} allows an output to be used elsewhere, whereas print does not. Try assigning the output of \texttt{test5} to a variable, and using that variable in a calculation. Try the same thing, with the \texttt{return} function in \texttt{test5} replaced with the \texttt{print} function.
+ 
+
+\vspace{0.2cm}
+
+\textbf{Part 3: Descriptive Statistics} 
+
+In this section, we will use data of various forms to calculate statistical values, and draw appropriate figures.
+
+\begin{enumerate}
+
+\item Type \texttt{uspop} into \texttt{R} to display the \texttt{uspop} data. Using this data:
+\begin{enumerate}
+\item Use the \texttt{mean} and \texttt{median} function to find the mean and median value.
+\item Use the \texttt{summary} function to generate what we call a six-number summary (the five-number summary plus the mean). Call this summary \texttt{popsum}. What does inputting \texttt{popsum[3]} give you? What about \texttt{popsum[3:4]}? What about \texttt{popsum[c(1,4)]}?
+\item Find the range of the data. Find the interquartile range of the data.
+\item The difference between a mean and median (and in particular whether it is positive or negative) can often give an indication of whether data is skewed. Check whether the \texttt{uspop} data is skewed using the \texttt{hist} function. Is this data skewed? If so, is the skew positive or negative?
+\item Find the variance using the \texttt{var} function. Find the standard deviation using the \texttt{sd} function. Verify that the value of the variance is indeed the squared value of the standard deviation.
+\end{enumerate}
+
+\item Use the \texttt{read.csv} function to load the \texttt{hair.csv} and \texttt{stop.csv} data files (you can find these on the module Ultra page). Remember that you will have to save the files on your machine first, and use your own machine's file location information inside the \texttt{read.csv} function. Remember as well that \texttt{R} will not process file location information written with single backslashes - you need to either add an additional backslash each time, or replace each backslash with a forward slash.
+
+
+\item Using the \texttt{hair} data:
+\begin{enumerate}
+\item Create a bar chart using the \texttt{barplot} function.
+\item Create the bar chart again, with all bars blue.
+\item Create a pie chart using the \texttt{pie} function.
+\item Create the pie chart again, with a different combination of five colours.
+\end{enumerate}
+
+\item Using the \texttt{stop} data:
+\begin{enumerate}
+\item Create a stem and leaf diagram.
+\item Find the mode of the data. 
+\item A helpful function for summarising data is the \texttt{quantile} function. Can you use this function to find the quintile values of the data? (Hint: the \texttt{quantile} function needs you to include one or more decimal values to tell it how far along the ordered data you want it to measure.)
+
+\end{enumerate}
+
+\item It is often claimed that the second year of a university degree is the
+hardest; one student believes that there is evidence for this in the average
+marks for students at Durham, and obtains the mean grades for  students on the Mathematics BSc and Mathematics \& Statistics BSc from the previous academic year (note that these values have been made up for this sheet).
+
+\begin{table}
+\begin{tabular}{l|rrr}
+          & \bf Year 1 & \bf Year 2 & \bf Year 3\\
+\hline
+\bf Maths     & 63.4\% & 65.1\% & 64.4\% \\
+\bf Math \& Stats & 64.7\% & 58.1\% & 63.2\%
+\end{tabular}
+\end{table}
+
+Looking at these figures, the student concludes there is clear evidence that it is harder to score highly in the second year than in other years. 
+  
+We are able to obtain five number summaries (which I covered in this week's videos) and sample sizes for each group:
+
+ 
+\begin{table}
+\begin{tabular}{llll}
+\bf Maths & \bf Year 1 & (18.2,58.5,64.4,73.4,91.1) & $n=139$\\
+\bf Maths & \bf Year 2 & (22.3,56.4,64.3,75.7,97.4) & $n=132$\\
+\bf Maths & \bf Year 3 & (29.1,57.9,66.6,73.4,86.0) & $n=131$\\
+\hline
+\bf MathStats & \bf Year 1 & (46.8,54.8,66.1,71.4,84.1) & $n=21$\\
+\bf MathStats & \bf Year 2 & (35.1,47.8,57.8,65.7,82.8) & $n=20$\\
+\bf MathStats & \bf Year 3 & (32.6,56.3,61.1,75.6,89.4) & $n=14$
+\end{tabular}
+\end{table}
+ 
+
+\begin{enumerate}
+\item We can use the \texttt{boxplot} function to produce a figure which allows us to compare the five number summaries from each group. You will have to input the summaries into \texttt{R} first, though, using the \texttt{c} function (or through some other method).
+
+\item What does the figure suggest to you about the suggestion that second year is the hardest year to score highly? Can you write a two-sentence summary of what the figure allows you to conclude?
+
+\item (\textbf{Tricky!}) For each of the six year groups, find whether any outliers were present. For each case where such values are found, state, giving a reason, whether the presence of outliers requires investigation.
+\end{enumerate}
+  
+\end{enumerate}
+ 
+%===========================================================================
+ \end{document}

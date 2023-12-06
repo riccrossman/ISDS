@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ISDSWorksheet1</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p>This worksheet is designed to get you used to using <code>R</code>
+and <code>RStudio</code>. There will be additional, similar worksheets
+in later workshops.</p>
+<p>We’re going to be asking you to do things that you (very likely)
+don’t yet know how to do with <code>R</code>. Learning a new programming
+language can be tricky, particularly for any of you for whom this is
+your <strong>first</strong> programming language. You have to get used
+to not only thinking carefully about not just what you want your
+computer to do, but the language you need to use in order to ask the
+computer to do it.</p>
+<p>For some of you, this is familiar territory. For others, it might be
+quite new. Don’t forget that there are multiple staff members in the
+room with you, ready to help you start making sense of <code>R</code>.
+Just as no-one would expect you to speak a new language fluently after
+your first lesson, we’re not expecting you to master <code>R</code> in
+this first workshop. Don’t be afraid to try things, and don’t be
+discouraged when (at least) some of them don’t work out.</p>
+<p><strong>Part I: The Basics Of <code>R</code></strong></p>
+<ol>
+<li><p>Step 1 is to load <code>RStudio</code>. How to download and
+install this program was covered in Video 1.1. If you are using a
+machine borrowed from Durham University, remember you need to load up
+<code>AppsAnywhere</code>, and select RStudio. The most recent version
+of <code>RStudio</code> currently available on <code>AppsAnywhere</code>
+is <code>RStudio 2023 with RStan and Rtools</code>. Click on “Launch
+Laptop” to start RStudio.</p>
+<p>We will start off using the <code>console</code> window - this should
+be in the bottom-left of your screen when running <code>RStudio</code>.
+This console window is the only thing you see at first when loading up
+<code>R</code> on its own.</p>
+<p>We can use the console window to directly input commands into R,
+writing our commands beside the blue “greater than” sign, and hitting
+Enter each time we want to give <code>R</code> a command. I will refer
+to the “greater than” sign as the <strong>command prompt</strong> from
+this point on.</p></li>
+<li><p>Provided you are online, there are several ways you can get
+assistance in <code>R</code> if you are stuck. Typing
+<code>help.start()</code> into the command prompt and pressing Enter
+will bring up a series of manuals for <code>R</code> that you can look
+at. I recommend reading through “An Introduction To <code>R</code>”.</p>
+<p>You might not find that <strong>too</strong> helpful, of course, if
+you have a specific question. With so much information on offer, finding
+what you actually need can be quite daunting. If you want help with,
+say, a specific function, you can request the help file for that
+function. To do this, type a question mark followed by the name of the
+function into the command prompt, and press Enter. For instance, if
+you’re not sure how to use the <code>sqrt</code> function, type
+<code>?sqrt</code> into the command prompt, and press Enter. Try it now.
+(You can achieve the same effect by typing in
+<code>help(sqrt)</code>.)</p>
+<p>Even the help files can sometimes not be so helpful; it takes time to
+learn how to read them. Often though they have an example at the bottom
+which you can play around with without reading the rest of the
+file.</p></li>
+<li><p>R is capable of performing basic arithmetic, using the operations
+<code>+,-,/,*</code>. Try using each of these to calculate a value. Do
+they work the way you expect? You can use <code>^</code> to calculate
+powers, as well.</p></li>
+<li><p>One of the most fundamental tasks in <code>R</code> is to assign
+a <strong>value</strong> to a <strong>variable</strong>, so you can use
+that value in functions, graphs, etc.</p>
+<p>Let’s assign the value 3 to a variable named <code>Steve</code>. To
+do this, you can enter <code>Steve&lt;-3</code> or
+<code>3-&gt;Steve</code>. Alternatively, you can enter
+<code>Steve=3</code>. I recommend though that you <strong>don’t</strong>
+assign values that way. In <code>R</code>, the commands “=” and “==”
+have very different meanings, and it’s easy to accidentally use the
+wrong one, and cause yourself problems.</p>
+<p>Try performing arithmetic using Steve. What values would you expect
+to get from typing in:</p>
+<ol>
+<li><p><code>Steve+3</code>?</p></li>
+<li><p><code>1/Steve</code>?</p></li>
+<li><p><code>Steve</code><code>^</code><code>3-Steve*2</code>?</p></li>
+</ol>
+<p>Did you get the values you expected?</p></li>
+<li><p>Use the <code>ls</code> <em>function</em> to obtain a
+<em>list</em> of the variables defined in your
+<strong>workspace</strong>. What <code>R</code> shows you in response
+will depend on how much you’ve been using <code>R</code> already, but
+you should at least see <code>Steve</code> listed, since you have
+defined this as a variable. If you want to be rid of Steve, type
+<code>rm(Steve)</code> and press Enter. Try this now, and use the
+<code>ls</code> function to confirm Steve is gone.</p>
+<p>Remember you can use <code>help(ls)</code> to find out how this
+command works.</p></li>
+<li><p>Using the command prompt has its disadvantages. If you
+accidentally hit Enter partway through writing a command, you can spoil
+what you were trying to get <code>R</code> to do. If you are entering
+complex code line by line, and make a mistake, you might have to start
+from the very beginning. There are ways to mitigate this - you can use
+the up and down keys to move between previous inputs, and make changes
+to an input - but it can be a real pain to correct mistakes even so.</p>
+<p>One way to solve this problem is to use the <code>R Script</code>
+window, at the top left of the <code>RStudio</code> display. This window
+lets you write as many lines of code as you like at once, with Enter
+being used not to input commands, but to provide a break that will be
+<strong>interpreted</strong> as pressing Enter later on.</p>
+<p>To input code from the <code>R Script</code> window to the
+<code>console</code> window, highlight the code and press
+<code>Run</code>, at the top-right of the <code>R Script</code> window.
+Everything you highlighted will be entered into the console, with line
+breaks interpreted as instances of pressing Enter.</p>
+<p>Load up the <code>D100000000</code> code from the Week 1 folder in
+the Ultra module page. Copy it into the <code>R Script</code> window.
+Highlight it and press <code>Run</code>. This will feed the whole of the
+code into <code>R</code> in one go, so you can start using the function
+immediately. Now, it’s true that you could also just paste the code
+directly into the console with the same effect, but if there’s just one
+error in the code, you would have to fix it, then paste the whole thing
+into the console again. It is much easier to find a mistake in the
+<code>R Script</code> window, fix it there, and then use
+<code>Run</code> to plug the new code in to <code>R</code>.</p></li>
+<li><p>Sometimes we might want to write a comment in our code, to remind
+us what a given line or section of code is doing (important hint:
+<strong>never</strong> assume you’ll remember why you did something the
+way you did after a few weeks, or even days, have passed). Doing this in
+<code>RStudio</code> is extremely easy. Just write whatever you want to
+write, and stick a hash sign at the start.</p>
+<p>Try it now. Write a sentence in the <code>R Script</code> window and
+put a hash sign at the front. Notice what happens? Try running the
+sentence through the console, first without the hash sign, and then with
+it.</p></li>
+<li><p>Eventually, you’ll want to stop using <code>RStudio</code> to do
+something else. You can save what you have in the <code>R Script</code>
+window by just going to <code>File</code> and choosing
+<code>Save As</code>, just as with many other programs.</p>
+<p>Note though that, depending on your settings, saving an
+<code>R</code> session in this way will <strong>only</strong> save what
+you’ve written in the <code>R Script</code> window. If you want to save
+the variables you’ve defined, and you want to save the inputs you’ve put
+into the console, you need to click on <code>Save All</code> instead.
+This will save three files:</p>
+<ol>
+<li><p>A .R file containing the <code>R Script</code> window (or more
+than one, if you’ve been working with multiple windows);</p></li>
+<li><p>A .RData file, containing the variables you’ve defined;</p></li>
+<li><p>A .txt file, containing the inputs you put through the
+console.</p></li>
+</ol>
+<p>So long as you save all three files in the same folder, loading up
+the .R file will automatically load the .Rdata and .txt files as
+well.</p></li>
+</ol>
+<p><strong>Part 2: Functions</strong></p>
+<p>In this module, we’re not going to be focusing on how to create your
+own functions in <code>R</code> - there are enough pre-created functions
+to keep us busy. That said, I do want to show you how you can make your
+own functions, as there are many situations in which writing something
+yourself is more practical than trying to find a function someone else
+has written that precisely matches your needs.</p>
+<p>The following code defines a simple <code>R</code> function, which
+checks whether the input it is given is precisely divisible by 5 or
+not.</p>
+<p><code>test5&lt;-function(n){</code></p>
+<p><code>if(n%%5==0){return(“Yes”)}</code></p>
+<p><code>else{return(“N”)}</code></p>
+<p><code>}</code></p>
+<ol>
+<li><p>Copy this function into your <code>R Script</code> window and use
+<code>Run</code> to enter it into the console. Try a few inputs to check
+the function is working as intended. <strong>Note</strong>: you will
+need to make sure the quote marks you enter into <code>R</code>
+<code>are</code> quote marks - if you copy and paste the text from this
+sheet, you may find the code won’t work without replacing the quote
+marks.</p></li>
+<li><p>What role does <code>%%</code> play here? Can you rewrite the
+function so that it checks whether or not the input is precisely
+divisible by 7?</p></li>
+<li><p>What role does <code>==</code> play here? What does replacing it
+with <code>!=</code> do to the way the function operates? What does
+replacing it with <code>&gt;</code> do to the way the function
+operates?</p></li>
+<li><p>(<strong>Tricky!</strong>) What role are <code>if</code> and
+<code>else</code> playing in the function? Can you rewrite the function
+in such a way that it checks first if the input is divisible by 5, and,
+if it isn’t, then check if the answer is divisible by 7?
+<strong>Hint:</strong> There’s nothing stopping you from using
+<code>if</code> more than once in a function.</p></li>
+</ol>
+<p><strong>Important Note:</strong> I have used the function
+<code>return</code> above to generate the output of the function
+<code>test5</code>. It is also possible to use the <code>print</code>
+function to do something similar. In general, this is something to
+avoid, however, since <code>return</code> allows an output to be used
+elsewhere, whereas print does not. Try assigning the output of
+<code>test5</code> to a variable, and using that variable in a
+calculation. Try the same thing, with the <code>return</code> function
+in <code>test5</code> replaced with the <code>print</code> function.</p>
+<p><strong>Part 3: Descriptive Statistics</strong></p>
+<p>In this section, we will use data of various forms to calculate
+statistical values, and draw appropriate figures.</p>
+<ol>
+<li><p>Type <code>uspop</code> into <code>R</code> to display the
+<code>uspop</code> data. Using this data:</p>
+<ol>
+<li><p>Use the <code>mean</code> and <code>median</code> function to
+find the mean and median value.</p></li>
+<li><p>Use the <code>summary</code> function to generate what we call a
+six-number summary (the five-number summary plus the mean). Call this
+summary <code>popsum</code>. What does inputting <code>popsum[3]</code>
+give you? What about <code>popsum[3:4]</code>? What about
+<code>popsum[c(1,4)]</code>?</p></li>
+<li><p>Find the range of the data. Find the interquartile range of the
+data.</p></li>
+<li><p>The difference between a mean and median (and in particular
+whether it is positive or negative) can often give an indication of
+whether data is skewed. Check whether the <code>uspop</code> data is
+skewed using the <code>hist</code> function. Is this data skewed? If so,
+is the skew positive or negative?</p></li>
+<li><p>Find the variance using the <code>var</code> function. Find the
+standard deviation using the <code>sd</code> function. Verify that the
+value of the variance is indeed the squared value of the standard
+deviation.</p></li>
+</ol></li>
+<li><p>Use the <code>read.csv</code> function to load the
+<code>hair.csv</code> and <code>stop.csv</code> data files (you can find
+these on the module Ultra page). Remember that you will have to save the
+files on your machine first, and use your own machine’s file location
+information inside the <code>read.csv</code> function. Remember as well
+that <code>R</code> will not process file location information written
+with single backslashes - you need to either add an additional backslash
+each time, or replace each backslash with a forward slash.</p></li>
+<li><p>Using the <code>hair</code> data:</p>
+<ol>
+<li><p>Create a bar chart using the <code>barplot</code>
+function.</p></li>
+<li><p>Create the bar chart again, with all bars blue.</p></li>
+<li><p>Create a pie chart using the <code>pie</code> function.</p></li>
+<li><p>Create the pie chart again, with a different combination of five
+colours.</p></li>
+</ol></li>
+<li><p>Using the <code>stop</code> data:</p>
+<ol>
+<li><p>Create a stem and leaf diagram.</p></li>
+<li><p>Find the mode of the data.</p></li>
+<li><p>A helpful function for summarising data is the
+<code>quantile</code> function. Can you use this function to find the
+quintile values of the data? (Hint: the <code>quantile</code> function
+needs you to include one or more decimal values to tell it how far along
+the ordered data you want it to measure.)</p></li>
+</ol></li>
+<li><p>It is often claimed that the second year of a university degree
+is the hardest; one student believes that there is evidence for this in
+the average marks for students at Durham, and obtains the mean grades
+for students on the Mathematics BSc and Mathematics &amp; Statistics BSc
+from the previous academic year (note that these values have been made
+up for this sheet).</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;"><strong>Year 1</strong></th>
+<th style="text-align: right;"><strong>Year 2</strong></th>
+<th style="text-align: right;"><strong>Year 3</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Maths</strong></td>
+<td style="text-align: right;">63.4%</td>
+<td style="text-align: right;">65.1%</td>
+<td style="text-align: right;">64.4%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Math &amp; Stats</strong></td>
+<td style="text-align: right;">64.7%</td>
+<td style="text-align: right;">58.1%</td>
+<td style="text-align: right;">63.2%</td>
+</tr>
+</tbody>
+</table>
+<p>Looking at these figures, the student concludes there is clear
+evidence that it is harder to score highly in the second year than in
+other years.</p>
+<p>We are able to obtain five number summaries (which I covered in this
+week’s videos) and sample sizes for each group:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Maths</strong></td>
+<td style="text-align: left;"><strong>Year 1</strong></td>
+<td style="text-align: left;">(18.2,58.5,64.4,73.4,91.1)</td>
+<td style="text-align: left;"><span
+class="math inline">\(n=139\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Maths</strong></td>
+<td style="text-align: left;"><strong>Year 2</strong></td>
+<td style="text-align: left;">(22.3,56.4,64.3,75.7,97.4)</td>
+<td style="text-align: left;"><span
+class="math inline">\(n=132\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Maths</strong></td>
+<td style="text-align: left;"><strong>Year 3</strong></td>
+<td style="text-align: left;">(29.1,57.9,66.6,73.4,86.0)</td>
+<td style="text-align: left;"><span
+class="math inline">\(n=131\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>MathStats</strong></td>
+<td style="text-align: left;"><strong>Year 1</strong></td>
+<td style="text-align: left;">(46.8,54.8,66.1,71.4,84.1)</td>
+<td style="text-align: left;"><span
+class="math inline">\(n=21\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>MathStats</strong></td>
+<td style="text-align: left;"><strong>Year 2</strong></td>
+<td style="text-align: left;">(35.1,47.8,57.8,65.7,82.8)</td>
+<td style="text-align: left;"><span
+class="math inline">\(n=20\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>MathStats</strong></td>
+<td style="text-align: left;"><strong>Year 3</strong></td>
+<td style="text-align: left;">(32.6,56.3,61.1,75.6,89.4)</td>
+<td style="text-align: left;"><span
+class="math inline">\(n=14\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>We can use the <code>boxplot</code> function to produce a figure
+which allows us to compare the five number summaries from each group.
+You will have to input the summaries into <code>R</code> first, though,
+using the <code>c</code> function (or through some other
+method).</p></li>
+<li><p>What does the figure suggest to you about the suggestion that
+second year is the hardest year to score highly? Can you write a
+two-sentence summary of what the figure allows you to conclude?</p></li>
+<li><p>(<strong>Tricky!</strong>) For each of the six year groups, find
+whether any outliers were present. For each case where such values are
+found, state, giving a reason, whether the presence of outliers requires
+investigation.</p></li>
+</ol></li>
+</ol>
+</body>
+</html>

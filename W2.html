@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="W2.tex"> 
+<link rel="stylesheet" type="text/css" href="W2.css"> 
+</head><body 
+>__________________________________________________________________
+<!--l. 32--><p class="noindent" ><span 
+class="cmssbx-10x-x-109">Introduction To Statistics For Data Science                       Workshop</span>
+<span 
+class="cmssbx-10x-x-109">2</span><br 
+class="newline" /><span 
+class="cmssbx-10x-x-109">Dr. Ric Crossman</span>____________________________________________________________________
+<!--l. 41--><p class="noindent" >This worksheet has two aims - to give you your first experience of working in a
+team, and to strengthen your skills with writing functions in <span 
+class="cmtt-10x-x-109">R</span>. These two aims
+will be achieved through your group working together to produce one or more
+short games, playable using <span 
+class="cmtt-10x-x-109">R</span>.
+<!--l. 44--><p class="noindent" ><span 
+class="cmbx-10x-x-109">Two New Functions</span>
+<!--l. 47--><p class="noindent" >I showed you how the <span 
+class="cmtt-10x-x-109">while </span>and <span 
+class="cmtt-10x-x-109">for </span>functions worked earlier in the workshop,
+bt here is a little more information on them which you might find useful when
+designing your game.
+        <ol  class="enumerate1" >
+<li 
+  class="enumerate" id="x1-3x1">
+        <!--l. 51--><p class="noindent" >The function <span 
+class="cmtt-10x-x-109">for </span>performs an operation a number of times; the number
+        of times has to be specified. We specify through the use of a counter,
+        often but not necessarily denoted <span 
+class="cmtt-10x-x-109">i</span>. We refer to this process as &#8220;a <span 
+class="cmtt-10x-x-109">for</span>
+     loop&#8221;. If we try:
+        <!--l. 54--><p class="noindent" ><span 
+class="cmtt-10x-x-109">a&#x003C;-0</span>
+     <!--l. 56--><p class="noindent" ><span 
+class="cmtt-10x-x-109">for(i in 1:10)</span><span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmtt-10x-x-109">a&#x003C;-a+i</span><span 
+class="cmsy-10x-x-109">}</span>
+   <!--l. 58--><p class="noindent" >we get a value <span 
+class="cmtt-10x-x-109">a</span>, initially equal to 0, but then has the values 1, 2, 3,...
+        10 added to it, for a total of 55. In contrast, if we try
+        <!--l. 60--><p class="noindent" ><span 
+class="cmtt-10x-x-109">a&#x003C;-0</span>
+     <!--l. 62--><p class="noindent" ><span 
+class="cmtt-10x-x-109">for(i in 1:10)</span><span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmtt-10x-x-109">a&#x003C;-a+1</span><span 
+class="cmsy-10x-x-109">}</span>
+   <!--l. 64--><p class="noindent" >we&#8217;ll get a value for <span 
+class="cmtt-10x-x-109">a </span>of 10. This is because <span 
+class="cmtt-10x-x-109">i </span>is not contained in the
+        <span 
+class="cmtt-10x-x-109">for </span>loop. <span 
+class="cmtt-10x-x-109">R </span>still knows how many times you want the loop to run for,
+        though, so it still does what you ask it to 10 times.
+        </li>
+<li 
+  class="enumerate" id="x1-5x2">
+        <!--l. 66--><p class="noindent" >The <span 
+class="cmtt-10x-x-109">while </span>function has some similarity with the <span 
+class="cmtt-10x-x-109">for </span>function, in that
+        it runs loops for us. The big difference is that the <span 
+class="cmtt-10x-x-109">for </span>function needs
+        you to specify in advance how many loops to run. The <span 
+class="cmtt-10x-x-109">while </span>function
+        will keep running loops so long as a given property holds.
+                                                                     
+
+                                                                     
+     <!--l. 69--><p class="noindent" >So for instance, we can write a function that tells us how many times
+     we can divide an integer by 2, as we see on the next page.
+     <!--l. 71--><p class="noindent" >
+                                                                     
+
+                                                                     
+     <!--l. 73--><p class="noindent" ><span 
+class="cmtt-10x-x-109">divideby2&#x003C;-function(x)</span><span 
+class="cmsy-10x-x-109">{</span>
+     <!--l. 75--><p class="noindent" ><span 
+class="cmtt-10x-x-109">count&#x003C;- -1</span>
+     <!--l. 77--><p class="noindent" ><span 
+class="cmtt-10x-x-109">status&#x003C;-1</span>
+     <!--l. 79--><p class="noindent" ><span 
+class="cmtt-10x-x-109">while(status==1)</span>
+     <!--l. 81--><p class="noindent" ><span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmtt-10x-x-109">count&#x003C;-count+1</span>
+     <!--l. 83--><p class="noindent" ><span 
+class="cmtt-10x-x-109">if(x%%2!=0)</span><span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmtt-10x-x-109">(status&#x003C;-0)</span><span 
+class="cmsy-10x-x-109">}</span>
+     <!--l. 85--><p class="noindent" ><span 
+class="cmtt-10x-x-109">x&#x003C;-x/2</span>
+     <!--l. 87--><p class="noindent" ><span 
+class="cmsy-10x-x-109">}</span>
+     <!--l. 89--><p class="noindent" ><span 
+class="cmtt-10x-x-109">return(count)</span>
+     <!--l. 91--><p class="noindent" ><span 
+class="cmsy-10x-x-109">}</span>
+     <!--l. 93--><p class="noindent" >Here, the <span 
+class="cmtt-10x-x-109">while </span>loop keeps dividing the input by 2, until such time as
+     that doesn&#8217;t give us a whole number. At that point the program exits
+     the <span 
+class="cmtt-10x-x-109">while </span>loop. By adding one to the count each time the <span 
+class="cmtt-10x-x-109">while </span>loop
+     runs, we learn how many times dividing by two was possible.
+     </li></ol>
+<!--l. 97--><p class="noindent" >
+                                                                     
+
+                                                                     
+<!--l. 100--><p class="noindent" ><span 
+class="cmbx-10x-x-109">Gang And Game</span>
+<!--l. 103--><p class="noindent" >Okay! It&#8217;s time to design a game. I&#8217;ll start this section by explaining what I want
+each group to produce, and after that, I&#8217;ve given some examples of code you can
+use to construct a game to play in the Workshop 2 folder on Ultra - feel free to
+use parts of this code in your own game. I&#8217;ll leave it up to each group as to how
+simple or complicated you want your game to be. Bear in mind the benefits of
+starting with something simple and making it more complicated once you&#8217;re sure
+the simple version works!
+<!--l. 105--><p class="noindent" >There are three primary components to produce in this exercise:
+     <ol  class="enumerate1" >
+<li 
+  class="enumerate" id="x1-7x1">
+     <!--l. 107--><p class="noindent" >A name for your game.
+     </li>
+<li 
+  class="enumerate" id="x1-9x2">
+     <!--l. 108--><p class="noindent" >A word-processed document which gives the rules to the game.
+     </li>
+<li 
+  class="enumerate" id="x1-11x3">
+     <!--l. 109--><p class="noindent" ><span 
+class="cmtt-10x-x-109">R </span>code to be used in playing the game. The game does not have to
+     be completely playable in <span 
+class="cmtt-10x-x-109">R </span>(the first example I give below just uses <span 
+class="cmtt-10x-x-109">R</span>
+     to generate dice rolls), but at least some part of your game should be
+     playable using <span 
+class="cmtt-10x-x-109">R </span>code that you have written.</li></ol>
+<!--l. 111--><p class="noindent" >It is up to your group to decide what the game involves, how complicated to
+make it, whether it should come in multiple stages (perhaps modular
+programming would be a good idea here). While this is a good opportunity to
+apply what you&#8217;ve learned so far about <span 
+class="cmtt-10x-x-109">R</span>, the primary focus of this task is taking
+your first steps in learning to work together. Discuss the task, and come to an
+agreement on what you want to try. Decide who will participate in each
+task and how, and how to keep each other informed of how things are
+going.
+<!--l. 113--><p class="noindent" >Remember what we just learned about teams vs groups. Will each of you have a
+different task, or will some/all tasks be done together? Do you want
+more than one person attempting to code something, so they can help
+each other, or are people going to work on different parts of code, in
+order to bring it together at the end. What will you do if someone gets
+stuck?
+                                                                     
+
+                                                                     
+<!--l. 115--><p class="noindent" >I won&#8217;t be asking you to submit your game, but I <span 
+class="cmbx-10x-x-109">will </span>be releasing a short
+reflective exercise at 6pm today for you to go through. This exercise will not be
+for credit, but it is an expectation that you complete the exercise before the next
+workshop on 19.10.23.
+ 
+</body></html> 
+
+                                                                     
+
+

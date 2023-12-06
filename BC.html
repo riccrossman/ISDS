@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="BC.tex"> 
+<link rel="stylesheet" type="text/css" href="BC.css"> 
+</head><body 
+>
+<!--l. 31--><p class="noindent" ><span 
+class="cmbx-10x-x-109">The Binomial Coefficient</span>
+<!--l. 34--><p class="noindent" >One of the ideas introduced in the Week 3 videos is the binomial coefficient. I
+said in Video 3.3 that I would explain how these values work in a separate place,
+since you don&#8217;t technically need to know how they work in order to make use of
+them.
+<!--l. 37--><p class="noindent" >That said, I do think the way they work is quite interesting, hence this document
+that you&#8217;re reading now!
+<!--l. 40--><p class="noindent" >A quick reminder of how we used binomial coefficients. This was in the context of
+a binomial distribution. The binomial distribution has two parameters <span 
+class="cmmi-10x-x-109">p </span>and <span 
+class="cmmi-10x-x-109">n</span>,
+and represents the number of trials, out of <span 
+class="cmmi-10x-x-109">n</span>, that have been in some way
+&#8220;successful&#8221;. The assumptions we need in order to use the binomial distribution
+are:
+     <ol  class="enumerate1" >
+<li 
+  class="enumerate" id="x1-3x1">
+     <!--l. 42--><p class="noindent" >Each trial either succeeds or fails;
+     </li>
+<li 
+  class="enumerate" id="x1-5x2">
+     <!--l. 43--><p class="noindent" >Each trial has the same probability <span 
+class="cmmi-10x-x-109">p </span>of success;
+     </li>
+<li 
+  class="enumerate" id="x1-7x3">
+     <!--l. 44--><p class="noindent" >Each trial result is independent of all other trials.</li></ol>
+<!--l. 47--><p class="noindent" >Under these assumptions, we went through how the probability of getting <span 
+class="cmmi-10x-x-109">x</span>
+sucesses and <span 
+class="cmmi-10x-x-109">n </span><span 
+class="cmsy-10x-x-109">- </span><span 
+class="cmmi-10x-x-109">x </span>failures in our series of <span 
+class="cmmi-10x-x-109">n </span>trials must equal the probability of
+getting <span 
+class="cmmi-10x-x-109">x </span>successes in a row followed by <span 
+class="cmmi-10x-x-109">n</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmmi-10x-x-109">x </span>failures in a row, multiplied by the
+number of different ways you can actually order <span 
+class="cmmi-10x-x-109">x </span>successful trials and <span 
+class="cmmi-10x-x-109">n </span><span 
+class="cmsy-10x-x-109">- </span><span 
+class="cmmi-10x-x-109">x</span>
+failed trials. For example, if I toss a coin, which has probability <span 
+class="cmmi-10x-x-109">p </span>the coin lands
+heads-side up, then the probability I get two heads and one tails in three tosses
+equals the probability of getting two heads then one tails (<span 
+class="cmmi-10x-x-109">p </span><span 
+class="cmsy-10x-x-109">&#x00D7; </span><span 
+class="cmmi-10x-x-109">p </span><span 
+class="cmsy-10x-x-109">&#x00D7; </span>(1 <span 
+class="cmsy-10x-x-109">- </span><span 
+class="cmmi-10x-x-109">p</span>)),
+multiplied by the number of ways we can get two heads and one tails in three
+tosses. There are three such combinations, HHT, HTH, THH, so the overall
+probability is 3<span 
+class="cmmi-10x-x-109">p</span><sup><span 
+class="cmr-8">2</span></sup>(1 <span 
+class="cmsy-10x-x-109">- </span><span 
+class="cmmi-10x-x-109">p</span>).
+<!--l. 50--><p class="noindent" >The binomial coefficient gives us the number of different ways we can arrange <span 
+class="cmmi-10x-x-109">x</span>
+successes and <span 
+class="cmmi-10x-x-109">n </span><span 
+class="cmsy-10x-x-109">- </span><span 
+class="cmmi-10x-x-109">x </span>failures into a sequence of lengh <span 
+class="cmmi-10x-x-109">n</span>. The way it does this is
+quite simple, but quite clever. First of all, how many ways are there of arranging
+
+<span 
+class="cmmi-10x-x-109">n </span><span 
+class="cmbx-10x-x-109">different </span>objects in a sequence? Well, we have n choices for the object starting
+the sequence, and <span 
+class="cmmi-10x-x-109">n </span><span 
+class="cmsy-10x-x-109">- </span>1 choices for the second object. This means we have
+<span 
+class="cmmi-10x-x-109">n </span><span 
+class="cmsy-10x-x-109">&#x00D7; </span>(<span 
+class="cmmi-10x-x-109">n </span><span 
+class="cmsy-10x-x-109">- </span>1) possibilities for what the first two objects in the sequence can be;
+each of the <span 
+class="cmmi-10x-x-109">n </span>choices for what comes first then gives us <span 
+class="cmmi-10x-x-109">n </span><span 
+class="cmsy-10x-x-109">- </span>1 choices for what
+comes second. Note that here we are assuming that swapping round the first two
+objects crates a new possible beginning - we&#8217;ll come back to this very soon.
+<!--l. 53--><p class="noindent" >By extending this logic, we have that there <span 
+class="cmmi-10x-x-109">n</span><span 
+class="cmsy-10x-x-109">&#x00D7; </span>(<span 
+class="cmmi-10x-x-109">n</span><span 
+class="cmsy-10x-x-109">- </span>1) <span 
+class="cmsy-10x-x-109">&#x00D7; </span>(<span 
+class="cmmi-10x-x-109">n</span><span 
+class="cmsy-10x-x-109">- </span>2) possibilities for
+the first three objects in the sequence, and so on. We keep on making choices
+from the objects left, until eventually we have 2 choices for the penultimate
+object, and only 1 choice for what comes last. Overall, then, the number of ways
+we can order <span 
+class="cmmi-10x-x-109">n </span>different objects is <span 
+class="cmmi-10x-x-109">n</span><span 
+class="cmsy-10x-x-109">&#x00D7; </span>(<span 
+class="cmmi-10x-x-109">n</span><span 
+class="cmsy-10x-x-109">- </span>1) <span 
+class="cmsy-10x-x-109">&#x00D7; </span>(<span 
+class="cmmi-10x-x-109">n</span><span 
+class="cmsy-10x-x-109">- </span>2) <span 
+class="cmsy-10x-x-109">&#x00D7;</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmsy-10x-x-109">&#x00D7; </span>2 <span 
+class="cmsy-10x-x-109">&#x00D7; </span>1, which we&#8217;ve
+described before as <span 
+class="cmmi-10x-x-109">n </span>factorial, denoted <span 
+class="cmmi-10x-x-109">n</span>!.
+<!--l. 56--><p class="noindent" >That&#8217;s how many ways we can arrange <span 
+class="cmmi-10x-x-109">n </span>different objects, then. That, though,
+isn&#8217;t the situation we&#8217;re in. We don&#8217;t have <span 
+class="cmmi-10x-x-109">n </span>different objects, we have one set of
+<span 
+class="cmmi-10x-x-109">x </span>identical objects, and a second set of <span 
+class="cmmi-10x-x-109">n </span><span 
+class="cmsy-10x-x-109">- </span><span 
+class="cmmi-10x-x-109">x </span>identical objects. We&#8217;ve just seen
+there are <span 
+class="cmmi-10x-x-109">x</span>! different ways to arrange <span 
+class="cmmi-10x-x-109">x </span>objects, but all of them would be the
+same in this case. That&#8217;s not a problem, though. We know we have <span 
+class="cmmi-10x-x-109">n</span>!
+combinations of objects, but that we can divide those combinations into groups
+of size <span 
+class="cmmi-10x-x-109">x</span>!, where each of the combinations in the group is actually identical,
+because they differ only in which successes go where, and all successes are the
+same.
+<!--l. 59--><p class="noindent" >If we divide <span 
+class="cmmi-10x-x-109">n</span>! by <span 
+class="cmmi-10x-x-109">x</span>!, then, we get the actual number of orderings of our
+<span 
+class="cmmi-10x-x-109">n</span>! objects which are actually <span 
+class="cmbx-10x-x-109">different </span>in terms of the placement of
+successes.
+<!--l. 63--><p class="noindent" >We can then make exactly the same argument for the failures. There are <span 
+class="cmmi-10x-x-109">n</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmmi-10x-x-109">x </span>of
+those, each of them identical, so we can divide our orderings into groups of size
+(<span 
+class="cmmi-10x-x-109">n </span><span 
+class="cmsy-10x-x-109">- </span><span 
+class="cmmi-10x-x-109">x</span>)!, with each ordering in a group having the same placement of failures.
+<!--l. 66--><p class="noindent" >Overall, then, we find the number of actually distinct orderings of <span 
+class="cmmi-10x-x-109">x </span>successes
+and <span 
+class="cmmi-10x-x-109">n</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmmi-10x-x-109">x </span>failures by taking <span 
+class="cmmi-10x-x-109">n</span>! and dividing it by both <span 
+class="cmmi-10x-x-109">x</span>! and (<span 
+class="cmmi-10x-x-109">n</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmmi-10x-x-109">x</span>)!. But that
+is precisely how I defined the binomial coefficient:
+<div class="eqnarray">
+<div class="math-display" >
+<img 
+src="BC0x.png" alt="(n )       n!
+  x  = x!(n---x)!
+" class="math-display" ></div>
+</div>
+<!--l. 72--><p class="noindent" >And there you have it: why the binomial coefficient has the definition it does. If
+you want to learn more about binomial coefficients, you can look up what is
+commonly known as &#8220;Pascal&#8217;s triangle&#8221;, which uses a triangular structure to
+build up successive rows of binomial coefficients. Alternatively/additionally, look
+up Al-Karaji, the Persian mathematician who first wrote down what
+we now call &#8220;Pascal&#8217;s triangle&#8221;, more than 600 years before Pascal was
+born!
+ 
+</body></html> 
+
+
+

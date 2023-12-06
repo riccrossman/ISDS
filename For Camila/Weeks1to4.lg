@@ -1,0 +1,795 @@
+htfcss: ec-lmbo  font-style: oblique;
+htfcss: ec-lmbx  font-weight: bold;
+htfcss: ec-lmbxi  font-style:italic; font-weight: bold;
+htfcss: ec-lmbxo  font-style: oblique; font-weight: bold;
+htfcss: ec-lmcsco  font-style: oblique;
+htfcss: ec-lmcs  font-variant: small-caps;
+htfcss: ec-lmri  font-style:italic;
+htfcss: ec-lmro  font-style: oblique;
+htfcss: ec-lmss  font-family: sans-serif;
+htfcss: ec-lmssbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssdc  font-family: sans-serif;
+htfcss: ec-lmssdo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmsso  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmssq  font-family: sans-serif;
+htfcss: ec-lmssqbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssqbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssqo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmtcsc  font-family: monospace,monospace;
+htfcss: ec-lmtcso  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtk  font-family: monospace,monospace;
+htfcss: ec-lmtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlc  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlco  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtt  font-family: monospace,monospace;
+htfcss: ec-lmtti  font-family: monospace,monospace; font-style:italic;
+htfcss: ec-lmtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtk  font-family: monospace,monospace;
+htfcss: ec-lmvtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmvtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtt  font-family: monospace,monospace;
+htfcss: ec-lmvtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ts1-lmbx  font-weight: bold;
+htfcss: ts1-lmbxi  font-style:italic; font-weight: bold;
+htfcss: ts1-lmbxo  font-style: oblique; font-weight: bold;
+htfcss: ts1-lmcsco  font-style: oblique;
+htfcss: ts1-lmri  font-style:italic;
+htfcss: ts1-lmro  font-style: oblique;
+htfcss: ts1-lmss  font-family: sans-serif;
+htfcss: ts1-lmssbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ts1-lmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: ts1-lmssdc  font-family: sans-serif;
+htfcss: ts1-lmssdo  font-family: sans-serif; font-style: oblique;
+htfcss: ts1-lmsso  font-family: sans-serif; font-style: oblique;
+htfcss: ts1-lmssq  font-family: sans-serif;
+htfcss: ts1-lmssqbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ts1-lmssqbx  font-family: sans-serif; font-weight: bold;
+htfcss: ts1-lmssqo  font-family: sans-serif; font-style: oblique;
+htfcss: ts1-lmtcsc  font-family: monospace,monospace;
+htfcss: ts1-lmtcso  font-style: oblique; font-family: monospace,monospace;
+htfcss: ts1-lmtk  font-family: monospace,monospace;
+htfcss: ts1-lmtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ts1-lmtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ts1-lmtlc  font-weight: light; font-family: monospace,monospace;
+htfcss: ts1-lmtlco  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ts1-lmtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ts1-lmtt  font-family: monospace,monospace;
+htfcss: ts1-lmtti  font-family: monospace,monospace; font-style:italic;
+htfcss: ts1-lmtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ts1-lmvtk  font-family: monospace,monospace;
+htfcss: ts1-lmvtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ts1-lmvtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ts1-lmvtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ts1-lmvtt  font-family: monospace,monospace;
+htfcss: ts1-lmvtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ts1-lmbo  font-style: oblique;
+htfcss: ec-lmbo  font-style: oblique;
+htfcss: ec-lmbx  font-weight: bold;
+htfcss: ec-lmbxi  font-style:italic; font-weight: bold;
+htfcss: ec-lmbxo  font-style: oblique; font-weight: bold;
+htfcss: ec-lmcsco  font-style: oblique;
+htfcss: ec-lmcs  font-variant: small-caps;
+htfcss: ec-lmri  font-style:italic;
+htfcss: ec-lmro  font-style: oblique;
+htfcss: ec-lmss  font-family: sans-serif;
+htfcss: ec-lmssbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssdc  font-family: sans-serif;
+htfcss: ec-lmssdo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmsso  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmssq  font-family: sans-serif;
+htfcss: ec-lmssqbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssqbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssqo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmtcsc  font-family: monospace,monospace;
+htfcss: ec-lmtcso  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtk  font-family: monospace,monospace;
+htfcss: ec-lmtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlc  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlco  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtt  font-family: monospace,monospace;
+htfcss: ec-lmtti  font-family: monospace,monospace; font-style:italic;
+htfcss: ec-lmtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtk  font-family: monospace,monospace;
+htfcss: ec-lmvtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmvtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtt  font-family: monospace,monospace;
+htfcss: ec-lmvtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmbo  font-style: oblique;
+htfcss: ec-lmbx  font-weight: bold;
+htfcss: ec-lmbxi  font-style:italic; font-weight: bold;
+htfcss: ec-lmbxo  font-style: oblique; font-weight: bold;
+htfcss: ec-lmcsco  font-style: oblique;
+htfcss: ec-lmcs  font-variant: small-caps;
+htfcss: ec-lmri  font-style:italic;
+htfcss: ec-lmro  font-style: oblique;
+htfcss: ec-lmss  font-family: sans-serif;
+htfcss: ec-lmssbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssdc  font-family: sans-serif;
+htfcss: ec-lmssdo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmsso  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmssq  font-family: sans-serif;
+htfcss: ec-lmssqbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssqbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssqo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmtcsc  font-family: monospace,monospace;
+htfcss: ec-lmtcso  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtk  font-family: monospace,monospace;
+htfcss: ec-lmtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlc  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlco  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtt  font-family: monospace,monospace;
+htfcss: ec-lmtti  font-family: monospace,monospace; font-style:italic;
+htfcss: ec-lmtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtk  font-family: monospace,monospace;
+htfcss: ec-lmvtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmvtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtt  font-family: monospace,monospace;
+htfcss: ec-lmvtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmbo  font-style: oblique;
+htfcss: ec-lmbx  font-weight: bold;
+htfcss: ec-lmbxi  font-style:italic; font-weight: bold;
+htfcss: ec-lmbxo  font-style: oblique; font-weight: bold;
+htfcss: ec-lmcsco  font-style: oblique;
+htfcss: ec-lmcs  font-variant: small-caps;
+htfcss: ec-lmri  font-style:italic;
+htfcss: ec-lmro  font-style: oblique;
+htfcss: ec-lmss  font-family: sans-serif;
+htfcss: ec-lmssbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssdc  font-family: sans-serif;
+htfcss: ec-lmssdo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmsso  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmssq  font-family: sans-serif;
+htfcss: ec-lmssqbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssqbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssqo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmtcsc  font-family: monospace,monospace;
+htfcss: ec-lmtcso  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtk  font-family: monospace,monospace;
+htfcss: ec-lmtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlc  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlco  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtt  font-family: monospace,monospace;
+htfcss: ec-lmtti  font-family: monospace,monospace; font-style:italic;
+htfcss: ec-lmtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtk  font-family: monospace,monospace;
+htfcss: ec-lmvtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmvtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtt  font-family: monospace,monospace;
+htfcss: ec-lmvtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmbo  font-style: oblique;
+htfcss: ec-lmbx  font-weight: bold;
+htfcss: ec-lmbxi  font-style:italic; font-weight: bold;
+htfcss: ec-lmbxo  font-style: oblique; font-weight: bold;
+htfcss: ec-lmcsco  font-style: oblique;
+htfcss: ec-lmcs  font-variant: small-caps;
+htfcss: ec-lmri  font-style:italic;
+htfcss: ec-lmro  font-style: oblique;
+htfcss: ec-lmss  font-family: sans-serif;
+htfcss: ec-lmssbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssdc  font-family: sans-serif;
+htfcss: ec-lmssdo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmsso  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmssq  font-family: sans-serif;
+htfcss: ec-lmssqbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssqbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssqo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmtcsc  font-family: monospace,monospace;
+htfcss: ec-lmtcso  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtk  font-family: monospace,monospace;
+htfcss: ec-lmtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlc  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlco  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtt  font-family: monospace,monospace;
+htfcss: ec-lmtti  font-family: monospace,monospace; font-style:italic;
+htfcss: ec-lmtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtk  font-family: monospace,monospace;
+htfcss: ec-lmvtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmvtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtt  font-family: monospace,monospace;
+htfcss: ec-lmvtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmbo  font-style: oblique;
+htfcss: ec-lmbx  font-weight: bold;
+htfcss: ec-lmbxi  font-style:italic; font-weight: bold;
+htfcss: ec-lmbxo  font-style: oblique; font-weight: bold;
+htfcss: ec-lmcsco  font-style: oblique;
+htfcss: ec-lmcs  font-variant: small-caps;
+htfcss: ec-lmri  font-style:italic;
+htfcss: ec-lmro  font-style: oblique;
+htfcss: ec-lmss  font-family: sans-serif;
+htfcss: ec-lmssbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssdc  font-family: sans-serif;
+htfcss: ec-lmssdo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmsso  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmssq  font-family: sans-serif;
+htfcss: ec-lmssqbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssqbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssqo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmtcsc  font-family: monospace,monospace;
+htfcss: ec-lmtcso  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtk  font-family: monospace,monospace;
+htfcss: ec-lmtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlc  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlco  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtt  font-family: monospace,monospace;
+htfcss: ec-lmtti  font-family: monospace,monospace; font-style:italic;
+htfcss: ec-lmtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtk  font-family: monospace,monospace;
+htfcss: ec-lmvtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmvtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtt  font-family: monospace,monospace;
+htfcss: ec-lmvtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: lmmib font_weight:bold;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+htfcss: lmmib font_weight:bold;
+htfcss: lmmib font_weight:bold;
+htfcss: rm-lmbo  font-style: oblique;
+htfcss: rm-lmbx  font-weight: bold;
+htfcss: rm-lmbxi  font-style:italic; font-weight: bold;
+htfcss: rm-lmbxo  font-style: oblique; font-weight: bold;
+htfcss: rm-lmri  font-style:italic;
+htfcss: rm-lmro  font-style: oblique;
+htfcss: rm-lmss  font-family: sans-serif;
+htfcss: rm-lmssbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: rm-lmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: rm-lmssdc  font-family: sans-serif;
+htfcss: rm-lmssdo  font-family: sans-serif; font-style: oblique;
+htfcss: rm-lmsso  font-family: sans-serif; font-style: oblique;
+htfcss: rm-lmssq  font-family: sans-serif;
+htfcss: rm-lmssqbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: rm-lmssqbx  font-family: sans-serif; font-weight: bold;
+htfcss: rm-lmssqo  font-family: sans-serif; font-style: oblique;
+htfcss: rm-lmcsc font-variant: small-caps;
+htfcss: lmbsy font-weight:bold;
+htfcss: lmbsy font-weight:bold;
+htfcss: lmbsy font-weight:bold;
+htfcss: ec-lmbo  font-style: oblique;
+htfcss: ec-lmbx  font-weight: bold;
+htfcss: ec-lmbxi  font-style:italic; font-weight: bold;
+htfcss: ec-lmbxo  font-style: oblique; font-weight: bold;
+htfcss: ec-lmcsco  font-style: oblique;
+htfcss: ec-lmcs  font-variant: small-caps;
+htfcss: ec-lmri  font-style:italic;
+htfcss: ec-lmro  font-style: oblique;
+htfcss: ec-lmss  font-family: sans-serif;
+htfcss: ec-lmssbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssdc  font-family: sans-serif;
+htfcss: ec-lmssdo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmsso  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmssq  font-family: sans-serif;
+htfcss: ec-lmssqbo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: ec-lmssqbx  font-family: sans-serif; font-weight: bold;
+htfcss: ec-lmssqo  font-family: sans-serif; font-style: oblique;
+htfcss: ec-lmtcsc  font-family: monospace,monospace;
+htfcss: ec-lmtcso  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtk  font-family: monospace,monospace;
+htfcss: ec-lmtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlc  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmtlco  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmtt  font-family: monospace,monospace;
+htfcss: ec-lmtti  font-family: monospace,monospace; font-style:italic;
+htfcss: ec-lmtto  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtk  font-family: monospace,monospace;
+htfcss: ec-lmvtko  font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtl  font-weight: light; font-family: monospace,monospace;
+htfcss: ec-lmvtlo  font-weight: light; font-style: oblique; font-family: monospace,monospace;
+htfcss: ec-lmvtt  font-family: monospace,monospace;
+htfcss: ec-lmvtto  font-style: oblique; font-family: monospace,monospace;
+File: Weeks1to4.html
+File: Weeks1to4.css
+File: Weeks1to4.tmp
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
+Css: a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: table.tabular{border-collapse: collapse; border-spacing: 0;}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: math { text-indent: 0em; }
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p:first-child{ margin-bottom:0; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: div.newtheorem .head{font-weight: bold;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline {border-top: 1px solid black;}
+Css: .tabbing-right {text-align:right;}
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
+Css: .equation td{text-align:center; vertical-align:middle; }
+Css: td.eq-no{ width:5%; }
+Css: table.equation { width:100%; } 
+Css: div.math-display, div.par-math-display{text-align:center;}
+Css: mtr.hline mtd{ border-bottom:black solid 1px; padding-top:2px; padding-bottom:0em; }
+Css: mtr.hline mtd mo{ display:none }
+Css: math .texttt { font-family: monospace; }
+Css: math .textit { font-style: italic; }
+Css: math .textsl { font-style: oblique; }
+Css: math .textsf { font-family: sans-serif; }
+Css: math .textbf { font-weight: bold; }
+Css: mo.MathClass-op + mi{margin-left:0.3em}
+Css: mi + mo.MathClass-op{margin-left:0.3em}
+Css:  math mstyle[mathvariant="bold"] { font-weight: bold; font-style: normal; } 
+Css:  math mstyle[mathvariant="normal"] { font-weight: normal; font-style: normal; } 
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Css: div.abstract p {margin-left:5%; margin-right:5%;}
+Css: div.abstract {width:100%;}
+Css: .abstracttitle{text-align:center;margin-bottom:1em;}
+Css: figure.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: figure.figure {text-align:center;}
+Css: figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
+Css: figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: p + figcaption, img + figcaption{margin-top: 1em;}
+Css: .abstract{margin:1em;}
+Css: .equation-star td{text-align:center; vertical-align:middle; }
+Css: table.equation-star { width:100%; } 
+Css: mtd.align-odd{margin-left:2em; text-align:right;}
+Css: mtd.align-even{margin-right:2em; text-align:left;}
+Css: .boxed{border: 1px solid black; padding-left:2px; padding-right:2px;}
+Css: pre.fancyvrb {white-space: pre-wrap; margin:0em;font-family:monospace,monospace;}
+Css: .framedenv{border: 1px solid black;}
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: table.longtable{border-collapse: collapse; border-spacing: 0;}
+Css: div.longtable{text-align:center;}
+Css: table.longtable{margin-left:auto; margin-right: auto;}
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline {border-top: 1px solid black;}
+Css: .rotatebox{display: inline-block;}
+File: stat1new.jpg
+Css: td#TBL-2-1-1{border-bottom:0.112em solid #000}
+Css: td#TBL-2-3-1{border-bottom:0.06999em solid #000}
+Css: td#TBL-2-13-1{border-bottom:0.112em solid #000}
+File: skewed.png
+File: kurtosis1.png
+File: modality.png
+File: symmetry.png
+File: bell.png
+File: qunatiles.png
+File: toyexample.png
+File: QQ.png
+File: boxplot3.png
+File: outliers.png
+File: Exempirical.png
+Css: #textcolor1{color:rgb(142,89,2)}
+Css: #textcolor2{color:rgb(142,89,2)}
+Css: #textcolor3{color:rgb(142,89,2)}
+Css: #textcolor4{color:rgb(0,0,0)}
+Css: #textcolor5{color:rgb(0,0,206)}
+Css: #textcolor6{color:rgb(0,0,206)}
+Css: #textcolor7{color:rgb(0,0,206)}
+Css: #textcolor8{color:rgb(0,0,206)}
+Css: #textcolor9{color:rgb(0,0,206)}
+Css: #textcolor10{color:rgb(0,0,206)}
+Css: #textcolor11{color:rgb(0,0,206)}
+Css: #textcolor12{color:rgb(0,0,206)}
+Css: #textcolor13{color:rgb(0,0,206)}
+Css: #textcolor14{color:rgb(0,0,206)}
+Css: #textcolor15{color:rgb(142,89,2)}
+Css: #textcolor16{color:rgb(0,0,0)}
+Css: #textcolor17{color:rgb(0,0,0)}
+Css: #textcolor18{color:rgb(79,153,5)}
+Css: #textcolor19{color:rgb(79,153,5)}
+Css: #textcolor20{color:rgb(79,153,5)}
+Css: #textcolor21{color:rgb(79,153,5)}
+Css: #textcolor22{color:rgb(79,153,5)}
+Css: #textcolor23{color:rgb(79,153,5)}
+Css: #textcolor24{color:rgb(79,153,5)}
+Css: #textcolor25{color:rgb(79,153,5)}
+Css: #textcolor26{color:rgb(79,153,5)}
+Css: #textcolor27{color:rgb(79,153,5)}
+Css: #textcolor28{color:rgb(142,89,2)}
+Css: #textcolor29{color:rgb(0,0,0)}
+Css: #textcolor30{color:rgb(142,89,2)}
+Css: #textcolor31{color:rgb(0,0,0)}
+Css: #textcolor32{color:rgb(0,0,0)}
+Css: #textcolor33{color:rgb(0,0,0)}
+Css: #textcolor34{color:rgb(0,0,0)}
+Css: #textcolor35{color:rgb(0,0,0)}
+Css: #textcolor36{color:rgb(0,0,0)}
+Css: #textcolor37{color:rgb(196,160,0)}
+Css: #textcolor38{color:rgb(0,0,0)}
+Css: #textcolor39{color:rgb(0,0,206)}
+Css: #textcolor40{color:rgb(0,0,206)}
+Css: #textcolor41{color:rgb(0,0,206)}
+Css: #textcolor42{color:rgb(0,0,206)}
+Css: #textcolor43{color:rgb(0,0,206)}
+Css: #textcolor44{color:rgb(142,89,2)}
+Css: #textcolor45{color:rgb(0,0,0)}
+Css: #textcolor46{color:rgb(142,89,2)}
+Css: #textcolor47{color:rgb(0,0,0)}
+Css: #textcolor48{color:rgb(0,0,0)}
+Css: #textcolor49{color:rgb(0,0,0)}
+Css: #textcolor50{color:rgb(0,0,0)}
+Css: #textcolor51{color:rgb(0,0,0)}
+Css: #textcolor52{color:rgb(142,89,2)}
+Css: #textcolor53{color:rgb(0,0,0)}
+Css: #textcolor54{color:rgb(196,160,0)}
+Css: #textcolor55{color:rgb(79,153,5)}
+Css: #textcolor56{color:rgb(196,160,0)}
+Css: #textcolor57{color:rgb(79,153,5)}
+File: unnamed-chunk-24-1-.png
+Css: #textcolor58{color:rgb(142,89,2)}
+Css: #textcolor59{color:rgb(0,0,0)}
+Css: #textcolor60{color:rgb(196,160,0)}
+Css: #textcolor61{color:rgb(79,153,5)}
+File: unnamed-chunk-24-2-.png
+Css: #textcolor62{color:rgb(142,89,2)}
+Css: #textcolor63{color:rgb(0,0,0)}
+Css: #textcolor64{color:rgb(142,89,2)}
+Css: #textcolor65{color:rgb(0,0,0)}
+Css: #textcolor66{color:rgb(0,0,0)}
+Css: #textcolor67{color:rgb(196,160,0)}
+Css: #textcolor68{color:rgb(0,0,0)}
+Css: #textcolor69{color:rgb(79,153,5)}
+Css: #textcolor70{color:rgb(79,153,5)}
+Css: #textcolor71{color:rgb(79,153,5)}
+Css: #textcolor72{color:rgb(0,0,0)}
+Css: #textcolor73{color:rgb(196,160,0)}
+Css: #textcolor74{color:rgb(0,0,0)}
+Css: #textcolor75{color:rgb(0,0,206)}
+Css: #textcolor76{color:rgb(0,0,0)}
+Css: #textcolor77{color:rgb(0,0,206)}
+Css: #textcolor78{color:rgb(196,160,0)}
+Css: #textcolor79{color:rgb(196,160,0)}
+Css: #textcolor80{color:rgb(0,0,206)}
+Css: #textcolor81{color:rgb(196,160,0)}
+Css: #textcolor82{color:rgb(196,160,0)}
+Css: #textcolor83{color:rgb(79,153,5)}
+Css: #textcolor84{color:rgb(196,160,0)}
+Css: #textcolor85{color:rgb(0,0,0)}
+Css: #textcolor86{color:rgb(0,0,206)}
+Css: #textcolor87{color:rgb(0,0,206)}
+File: unnamed-chunk-26-1-.png
+Css: #textcolor88{color:rgb(142,89,2)}
+Css: #textcolor89{color:rgb(0,0,0)}
+Css: #textcolor90{color:rgb(142,89,2)}
+Css: #textcolor91{color:rgb(0,0,0)}
+Css: #textcolor92{color:rgb(0,0,0)}
+File: unnamed-chunk-27-1-.png
+Css: #textcolor93{color:rgb(0,0,0)}
+Css: #textcolor94{color:rgb(0,0,0)}
+File: unnamed-chunk-27-2-.png
+File: uniform.png
+File: expdist.png
+File: normdist1.png
+File: snormdist2.png
+File: lognorm.png
+File: chidist.png
+File: tdist.png
+File: fdist.png
+File: joint1.png
+File: stat4.png
+File: ex.sampling.png
+Css: #textcolor95{color:rgb(0,0,0)}
+Css: #textcolor96{color:rgb(0,0,0)}
+Css: #textcolor97{color:rgb(0,0,206)}
+Css: #textcolor98{color:rgb(0,0,0)}
+Css: #textcolor99{color:rgb(0,0,0)}
+Css: #textcolor100{color:rgb(0,0,0)}
+Css: #textcolor101{color:rgb(0,0,206)}
+File: stat1new.jpg
+Css: td#TBL-5-1-1{border-bottom:0.112em solid #000}
+Css: td#TBL-5-3-1{border-bottom:0.06999em solid #000}
+Css: td#TBL-5-9-1{border-bottom:0.112em solid #000}
+File: estimationmean.png
+File: snormdist2.png
+File: chidist1.png
+Css: #textcolor102{color:rgb(0,0,0)}
+Css: #textcolor103{color:rgb(0,0,206)}
+Css: #textcolor104{color:rgb(0,0,206)}
+Css: #textcolor105{color:rgb(0,0,0)}
+Css: #textcolor106{color:rgb(0,0,206)}
+File: hypotab1.png
+File: hypoztest.png
+Css: td#TBL-6-1-5{border-bottom:0.112em solid #000}
+Css: td#TBL-6-3-5{border-bottom:0.06999em solid #000}
+Css: td#TBL-6-7-5{border-bottom:0.112em solid #000}
+File: hypottest.png
+Css: td#TBL-7-1-5{border-bottom:0.112em solid #000}
+Css: td#TBL-7-7-5{border-bottom:0.112em solid #000}
+File: hypoex.png
+Css: #textcolor107{color:rgb(142,89,2)}
+Css: #textcolor108{color:rgb(142,89,2)}
+Css: #textcolor109{color:rgb(0,0,0)}
+Css: #textcolor110{color:rgb(0,0,206)}
+Css: #textcolor111{color:rgb(0,0,206)}
+Css: #textcolor112{color:rgb(0,0,206)}
+Css: #textcolor113{color:rgb(0,0,206)}
+Css: #textcolor114{color:rgb(0,0,206)}
+Css: #textcolor115{color:rgb(0,0,206)}
+Css: #textcolor116{color:rgb(0,0,206)}
+Css: #textcolor117{color:rgb(0,0,206)}
+Css: #textcolor118{color:rgb(0,0,206)}
+Css: #textcolor119{color:rgb(0,0,206)}
+Css: #textcolor120{color:rgb(0,0,206)}
+Css: #textcolor121{color:rgb(0,0,206)}
+Css: #textcolor122{color:rgb(0,0,206)}
+Css: #textcolor123{color:rgb(0,0,206)}
+Css: #textcolor124{color:rgb(0,0,206)}
+Css: #textcolor125{color:rgb(142,89,2)}
+Css: #textcolor126{color:rgb(0,0,0)}
+Css: #textcolor127{color:rgb(196,160,0)}
+Css: #textcolor128{color:rgb(79,153,5)}
+Css: #textcolor129{color:rgb(196,160,0)}
+Css: #textcolor130{color:rgb(0,0,206)}
+Css: #textcolor131{color:rgb(196,160,0)}
+Css: #textcolor132{color:rgb(0,0,206)}
+Css: #textcolor133{color:rgb(142,89,2)}
+Css: #textcolor134{color:rgb(142,89,2)}
+Css: #textcolor135{color:rgb(0,0,0)}
+Css: #textcolor136{color:rgb(79,153,5)}
+Css: #textcolor137{color:rgb(196,160,0)}
+Css: #textcolor138{color:rgb(0,0,0)}
+Css: #textcolor139{color:rgb(196,160,0)}
+Css: #textcolor140{color:rgb(0,0,0)}
+Css: #textcolor141{color:rgb(142,89,2)}
+Css: #textcolor142{color:rgb(0,0,0)}
+Css: #textcolor143{color:rgb(0,0,0)}
+Css: #textcolor144{color:rgb(196,160,0)}
+Css: #textcolor145{color:rgb(0,0,0)}
+Css: #textcolor146{color:rgb(0,0,206)}
+Css: #textcolor147{color:rgb(0,0,206)}
+Css: #textcolor148{color:rgb(0,0,0)}
+Css: #textcolor149{color:rgb(0,0,0)}
+Css: #textcolor150{color:rgb(196,160,0)}
+Css: #textcolor151{color:rgb(79,153,5)}
+Css: #textcolor152{color:rgb(0,0,0)}
+File: unnamed-chunk-53-1-.png
+File: Ftest.png
+File: hytestz1.png
+Css: td#TBL-8-1-5{border-bottom:0.112em solid #000}
+Css: td#TBL-8-3-5{border-bottom:0.06999em solid #000}
+Css: td#TBL-8-7-5{border-bottom:0.112em solid #000}
+File: hytestt.png
+Css: td#TBL-9-1-1{border-bottom:0.112em solid #000}
+Css: td#TBL-9-3-1{border-bottom:0.06999em solid #000}
+Css: td#TBL-9-17-1{border-bottom:0.112em solid #000}
+File: Ttest2.png
+Css: #textcolor153{color:rgb(142,89,2)}
+Css: #textcolor154{color:rgb(0,0,0)}
+Css: #textcolor155{color:rgb(0,0,206)}
+Css: #textcolor156{color:rgb(0,0,206)}
+Css: #textcolor157{color:rgb(0,0,206)}
+Css: #textcolor158{color:rgb(0,0,206)}
+Css: #textcolor159{color:rgb(0,0,206)}
+Css: #textcolor160{color:rgb(0,0,206)}
+Css: #textcolor161{color:rgb(0,0,206)}
+Css: #textcolor162{color:rgb(0,0,206)}
+Css: #textcolor163{color:rgb(0,0,206)}
+Css: #textcolor164{color:rgb(0,0,206)}
+Css: #textcolor165{color:rgb(0,0,206)}
+Css: #textcolor166{color:rgb(142,89,2)}
+Css: #textcolor167{color:rgb(0,0,0)}
+Css: #textcolor168{color:rgb(0,0,206)}
+Css: #textcolor169{color:rgb(0,0,206)}
+Css: #textcolor170{color:rgb(0,0,206)}
+Css: #textcolor171{color:rgb(0,0,206)}
+Css: #textcolor172{color:rgb(0,0,206)}
+Css: #textcolor173{color:rgb(0,0,206)}
+Css: #textcolor174{color:rgb(0,0,206)}
+Css: #textcolor175{color:rgb(0,0,206)}
+Css: #textcolor176{color:rgb(0,0,206)}
+Css: #textcolor177{color:rgb(0,0,206)}
+Css: #textcolor178{color:rgb(0,0,206)}
+Css: #textcolor179{color:rgb(142,89,2)}
+Css: #textcolor180{color:rgb(0,0,0)}
+Css: #textcolor181{color:rgb(0,0,0)}
+Css: #textcolor182{color:rgb(0,0,206)}
+Css: #textcolor183{color:rgb(0,0,0)}
+Css: #textcolor184{color:rgb(0,0,206)}
+Css: #textcolor185{color:rgb(196,160,0)}
+Css: #textcolor186{color:rgb(0,0,206)}
+Css: #textcolor187{color:rgb(0,0,0)}
+Css: #textcolor188{color:rgb(79,153,5)}
+Css: #textcolor189{color:rgb(196,160,0)}
+Css: #textcolor190{color:rgb(0,0,0)}
+Css: #textcolor191{color:rgb(196,160,0)}
+Css: #textcolor192{color:rgb(0,0,206)}
+Css: #textcolor193{color:rgb(0,0,0)}
+Css: #textcolor194{color:rgb(196,160,0)}
+Css: #textcolor195{color:rgb(79,153,5)}
+Css: #textcolor196{color:rgb(196,160,0)}
+Css: #textcolor197{color:rgb(79,153,5)}
+File: unnamed-chunk-59-1-.png
+Css: #textcolor198{color:rgb(0,0,0)}
+Css: #textcolor199{color:rgb(196,160,0)}
+Css: #textcolor200{color:rgb(0,0,206)}
+Css: #textcolor201{color:rgb(0,0,0)}
+Css: #textcolor202{color:rgb(196,160,0)}
+Css: #textcolor203{color:rgb(79,153,5)}
+Css: #textcolor204{color:rgb(196,160,0)}
+Css: #textcolor205{color:rgb(0,0,206)}
+File: unnamed-chunk-59-2-.png
+Css: td#TBL-10-1-4{border-bottom:0.112em solid #000}
+Css: td#TBL-10-3-4{border-bottom:0.06999em solid #000}
+Css: td#TBL-10-11-4{border-bottom:0.112em solid #000}
+Css: #textcolor206{color:rgb(142,89,2)}
+Css: #textcolor207{color:rgb(0,0,0)}
+Css: #textcolor208{color:rgb(0,0,206)}
+Css: #textcolor209{color:rgb(0,0,206)}
+Css: #textcolor210{color:rgb(0,0,206)}
+Css: #textcolor211{color:rgb(0,0,206)}
+Css: #textcolor212{color:rgb(0,0,206)}
+Css: #textcolor213{color:rgb(142,89,2)}
+Css: #textcolor214{color:rgb(0,0,0)}
+Css: #textcolor215{color:rgb(0,0,206)}
+Css: #textcolor216{color:rgb(0,0,206)}
+Css: #textcolor217{color:rgb(0,0,206)}
+Css: #textcolor218{color:rgb(0,0,206)}
+Css: #textcolor219{color:rgb(0,0,206)}
+Css: #textcolor220{color:rgb(0,0,0)}
+Css: #textcolor221{color:rgb(196,160,0)}
+Css: #textcolor222{color:rgb(0,0,0)}
+Css: #textcolor223{color:rgb(196,160,0)}
+Css: #textcolor224{color:rgb(79,153,5)}
+Css: td#TBL-11-1-1{border-bottom:0.112em solid #000}
+Css: td#TBL-11-3-1{border-bottom:0.06999em solid #000}
+Css: td#TBL-11-11-1{border-bottom:0.112em solid #000}
+Css: td#TBL-12-1-1{border-bottom:0.112em solid #000}
+Css: td#TBL-12-3-1{border-bottom:0.06999em solid #000}
+Css: td#TBL-12-14-1{border-bottom:0.112em solid #000}
+Css: #textcolor225{color:rgb(142,89,2)}
+Css: #textcolor226{color:rgb(0,0,0)}
+Css: #textcolor227{color:rgb(0,0,206)}
+Css: #textcolor228{color:rgb(0,0,206)}
+Css: #textcolor229{color:rgb(0,0,206)}
+Css: #textcolor230{color:rgb(142,89,2)}
+Css: #textcolor231{color:rgb(0,0,0)}
+Css: #textcolor232{color:rgb(0,0,206)}
+Css: #textcolor233{color:rgb(0,0,206)}
+Css: #textcolor234{color:rgb(0,0,206)}
+Css: #textcolor235{color:rgb(0,0,206)}
+Css: #textcolor236{color:rgb(0,0,0)}
+Css: #textcolor237{color:rgb(196,160,0)}
+Css: #textcolor238{color:rgb(79,153,5)}
+--- characters ---
+Font("ec-lmr","10","10","100")
+Font("lmbsy","10","10","100")
+Font("lmbsy","7","7","100")
+Font("lmbsy","5","5","100")
+Font("lmex","10","10","100")
+Font("msam","10","10","100")
+Font("msam","7","7","100")
+Font("msam","5","5","100")
+Font("msbm","10","10","100")
+Font("msbm","7","7","100")
+Font("msbm","5","5","100")
+Font("rm-lmr","10","10","100")
+Font("rm-lmr","7","7","100")
+Font("rm-lmr","5","5","100")
+Font("lmmi","10","10","100")
+Font("lmmi","7","7","100")
+Font("lmmi","5","5","100")
+Font("lmsy","10","10","100")
+Font("lmsy7","","7","100")
+Font("lmsy5","","5","100")
+Font("ec-lmr","17","17","100")
+Font("ec-lmr","12","12","100")
+Font("ec-lmtt","10","10","100")
+Font("ec-lmbx","10","10","100")
+Font("ec-lmtti","10","10","100")
+Font("ts1-lmtt10","","10","100")
+Font("ec-lmri","10","10","100")

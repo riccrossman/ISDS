@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Durham University" />
+
+
+<title>Worksheet on Classification Methods</title>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Worksheet on Classification Methods</h1>
+<h4 class="author">Durham University</h4>
+
+</div>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<p>This worksheet covers classification methods. It considers a <span class="math inline">\(K=2\)</span> group example involving stock-market data. We consider best subset selection for logistic regression, including picking the number of predictors using <span class="math inline">\(k\)</span>-fold cross-validation.</p>
+<div id="background" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Background</h1>
+<p>The <strong>Weekly S&amp;P Stock Market Data</strong> that we will use in this practical are available as the <code>Weekly</code> data in the <code>ISLR</code> package. It comprises percentage returns for the S&amp;P 500 stock index over 1089 weeks between 1990 and 2010. We begin by loading the data and printing the first few rows</p>
+<pre class="r"><code>## Load the package
+library(ISLR)
+## Load the data
+data(Weekly)
+## Inspect the size
+dim(Weekly)</code></pre>
+<pre><code>## [1] 1089    9</code></pre>
+<pre class="r"><code>## Print the first few rows
+head(Weekly)</code></pre>
+<pre><code>##   Year   Lag1   Lag2   Lag3   Lag4   Lag5    Volume  Today Direction
+## 1 1990  0.816  1.572 -3.936 -0.229 -3.484 0.1549760 -0.270      Down
+## 2 1990 -0.270  0.816  1.572 -3.936 -0.229 0.1485740 -2.576      Down
+## 3 1990 -2.576 -0.270  0.816  1.572 -3.936 0.1598375  3.514        Up
+## 4 1990  3.514 -2.576 -0.270  0.816  1.572 0.1616300  0.712        Up
+## 5 1990  0.712  3.514 -2.576 -0.270  0.816 0.1537280  1.178        Up
+## 6 1990  1.178  0.712  3.514 -2.576 -0.270 0.1544440 -1.372      Down</code></pre>
+<p>For each week, the column labelled <code>Today</code> gives the percentage return that week whilst the columns labelled <code>Lag1</code> up to <code>Lag5</code> give the percentage returns for one week previous up to five weeks previous. <code>Year</code> is the year in which the observation was recorded and <code>Volume</code> gives the average number of daily shares traded (in billions) that week. Finally, <code>Direction</code> is a factor with two levels – <code>Down</code> and <code>Up</code> – indicating whether the market had a negative or positive return in that week, i.e. if <code>Today</code><span class="math inline">\(&lt; 0\)</span> then <code>Direction</code><span class="math inline">\(=\)</span><code>Down</code>, whilst if <code>Today</code><span class="math inline">\(\ge 0\)</span> then <code>Direction</code><span class="math inline">\(=\)</span><code>Up</code>. We are interested in whether we can predict whether the market has a negative or positive return for the S&amp;P 500 stock index using its value in previous weeks and the current volume of trading. One way of investigating this question would be to build a multiple linear regression model for <code>Today</code> with <code>Lag1</code>, <span class="math inline">\(\ldots\)</span>, <code>Lag5</code> and <code>Volume</code> as predictor variables. (Because, clearly, if we can predict percentage returns, we can also predict whether they are negative or positive). However, for the purpose of illustration in this example, we will ignore the <code>Today</code> column and use <code>Direction</code> as our response variable.</p>
+<p>Before we begin to analyse the data, note that <code>Direction</code> is stored as a factor:</p>
+<pre class="r"><code>head(Weekly$Direction)</code></pre>
+<pre><code>## [1] Down Down Up   Up   Up   Down
+## Levels: Down Up</code></pre>
+<p>where <code>Down</code> is the first level and <code>Up</code> the second. Recall that R stores factors internally as integers:</p>
+<pre class="r"><code>typeof(Weekly$Direction)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>head(as.integer(Weekly$Direction))</code></pre>
+<pre><code>## [1] 1 1 2 2 2 1</code></pre>
+<p>And so <code>Down</code> is represented internally as a <code>1</code> and <code>Up</code> as a <code>2</code>. When working with logistic regression, I prefer to adopt the more standard 0/1 numerical labels. To do this, whilst also omitting the <code>Today</code> column, we can create a new data frame:</p>
+<pre class="r"><code>## Create new column of 0s and 1s
+MyWeekly = data.frame(Weekly[,-(8:9)], Direction=as.integer(Weekly$Direction)-1)
+## Print first few rows:
+head(MyWeekly)</code></pre>
+<pre><code>##   Year   Lag1   Lag2   Lag3   Lag4   Lag5    Volume Direction
+## 1 1990  0.816  1.572 -3.936 -0.229 -3.484 0.1549760         0
+## 2 1990 -0.270  0.816  1.572 -3.936 -0.229 0.1485740         0
+## 3 1990 -2.576 -0.270  0.816  1.572 -3.936 0.1598375         1
+## 4 1990  3.514 -2.576 -0.270  0.816  1.572 0.1616300         1
+## 5 1990  0.712  3.514 -2.576 -0.270  0.816 0.1537280         1
+## 6 1990  1.178  0.712  3.514 -2.576 -0.270 0.1544440         0</code></pre>
+<p>So in my labelling 0 and 1 refer to weeks where the stock market is down or up, respectively.</p>
+</div>
+<div id="sec:EDA" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Exploratory Data Analysis</h1>
+<p>Now that we are clear in our labelling of the response variable, we can perform some exploratory data analysis. We note that</p>
+<pre class="r"><code>table(MyWeekly$Direction)</code></pre>
+<pre><code>## 
+##   0   1 
+## 484 605</code></pre>
+<p>and so the stock market was up over more weeks than it was down.</p>
+<p>There are various ways we could explore the data graphically. For example, we can get an idea of the relationships between variables by producing a pairs plot of the predictors and, additionally, the year, colouring the points according to whether the stock market was up or down:</p>
+<pre class="r"><code>pairs(MyWeekly[,1:7], col=MyWeekly[,8]+1)</code></pre>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:weeklypairs"></span>
+<img src="Week10Sheet-Discriminant-Analysis_files/figure-html/weeklypairs-1.png" alt="Scatterplot for the `Weekly` data. Weeks when the stock market is down / up appear in black / red." width="672" />
+<p class="caption">
+Figure 2.1: Scatterplot for the <code>Weekly</code> data. Weeks when the stock market is down / up appear in black / red.
+</p>
+</div>
+<p>This produces the plot above. On the basis of this plot the only obvious pattern is the positive, though non-linear, relationship between <code>Volume</code> and <code>Year</code>, which suggests that the overall volume of traded shares is increasing over time. None of the predictors show any obvious relationship with <code>Direction</code>.</p>
+<!--
+COULD ADD A QUESTION HERE - ASK FOR SIDE-BY-SIDE BOX PLOTS
+-->
+</div>
+<div id="logistic-regression" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Logistic Regression</h1>
+<div id="the-full-model" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> The Full Model</h2>
+<p>We start by recording the number of rows in our data frame and the number of predictor variables.</p>
+<pre class="r"><code>## Store n and p
+(n = nrow(MyWeekly))</code></pre>
+<pre><code>## [1] 1089</code></pre>
+<pre class="r"><code>(p = ncol(MyWeekly) - 1)</code></pre>
+<pre><code>## [1] 7</code></pre>
+<p>Next, we will fit a logistic regression model for <code>Direction</code> in terms of the predictors <code>Lag1</code> through <code>Lag5</code> and <code>Volume</code>:</p>
+<pre class="r"><code>logreg_fit = glm(Direction ~ ., data=MyWeekly, family=&quot;binomial&quot;)</code></pre>
+<p>We can then summarise the fit of the model using the <code>summary</code> function:</p>
+<pre class="r"><code>summary(logreg_fit)</code></pre>
+<pre><code>## 
+## Call:
+## glm(formula = Direction ~ ., family = &quot;binomial&quot;, data = MyWeekly)
+## 
+## Coefficients:
+##              Estimate Std. Error z value Pr(&gt;|z|)  
+## (Intercept) 17.225822  37.890522   0.455   0.6494  
+## Year        -0.008500   0.018991  -0.448   0.6545  
+## Lag1        -0.040688   0.026447  -1.538   0.1239  
+## Lag2         0.059449   0.026970   2.204   0.0275 *
+## Lag3        -0.015478   0.026703  -0.580   0.5622  
+## Lag4        -0.027316   0.026485  -1.031   0.3024  
+## Lag5        -0.014022   0.026409  -0.531   0.5955  
+## Volume       0.003256   0.068836   0.047   0.9623  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1496.2  on 1088  degrees of freedom
+## Residual deviance: 1486.2  on 1081  degrees of freedom
+## AIC: 1502.2
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+<p>Inspecting the <span class="math inline">\(p\)</span>-value column (i.e. the <code>Pr(&gt;|z|)</code> column), we see that only <code>Lag2</code> has a coefficient which is significantly different from zero when testing at the 5% level. In other words, if we label <code>Lag1</code>, <span class="math inline">\(\ldots\)</span>, <code>Lag5</code> as <span class="math inline">\(x_1, \ldots, x_5\)</span> and <code>Volume</code> as <span class="math inline">\(x_6\)</span> and then perform six hypothesis tests:
+<span class="math display">\[\begin{equation*}
+H_0: \beta_j = 0 \quad \text{versus} \quad H_1: \beta_j \ne 0,
+\end{equation*}\]</span>
+we would only reject the null hypothesis at the 5% level for <span class="math inline">\(j=2\)</span>, when testing the effect of <code>Lag2</code>. This suggests that for the other variables, given a model that already contains all the other predictors, the predictor in question adds very little in terms of forecasting whether the stock market is up or down.</p>
+<p>We can use R to calculate the values that our fitted model would predict for the predictor variables on the 1st, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(n\)</span>th rows of our matrix of predictor variables by: (i) using the <code>predict</code> function to get the predicted probabilities <span class="math inline">\(\hat{p}_1,\ldots,\hat{p}_n\)</span> that the response is equal to 1 and then (ii) applying a classification rule to get the binary predictions <span class="math inline">\(\hat{y}_1,\ldots,\hat{y}_n\)</span>. As arguments to the <code>predict</code> function, we simply pass the object returned by the <code>glm</code> function, the data frame containing the predictor variables at which we want predictions and the argument <code>type="response"</code> which ensures the values returned are the predicted probabilities. In this case we have:</p>
+<pre class="r"><code>## Compute the fitted values: 
+phat = predict(logreg_fit, MyWeekly, type=&quot;response&quot;)
+yhat = as.numeric(ifelse(phat &gt; 0.5, 1, 0))
+## Print first few elements:
+head(yhat)</code></pre>
+<pre><code>## [1] 1 1 1 0 1 1</code></pre>
+<pre class="r"><code>## Compare with actual values:
+head(MyWeekly$Direction)</code></pre>
+<pre><code>## [1] 0 0 1 1 1 0</code></pre>
+
+<div class="question">
+<ul>
+<li>As we have discussed, training (and test) error for classification problems is generally measured as the proportion of misclassified observations, i.e. the proportion of observations where <span class="math inline">\(\hat{y}_i\)</span> is not equal to <span class="math inline">\(y_i\)</span>. Calculate the training error for this model.</li>
+<li>Please think about this yourself before uncovering the solution.
+</div></li>
+</ul>
+<details>
+<summary>
+Click for solution
+</summary>
+<pre class="r"><code>## Compute the fitted values: did this above and they are stored in yhat
+## Compute training error:
+(training_error = 1 - mean(yhat == MyWeekly$Direction))</code></pre>
+<pre><code>## [1] 0.43618</code></pre>
+</details>
+<p><br></p>
+<p>We see that the training error is around 43.62%.</p>
+<p>If we simply flipped a coin to decide whether to predict an increase or decrease, the training error would be 50%. It seems we are doing slightly better than this. However, the training error uses the same data to train and test the model and so gives an optimistic assessment of the performance of the classifier.</p>
+</div>
+<div id="subsec:bss" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Best Subset Selection</h2>
+<p>In the Section <a href="#sec:EDA">2</a> we saw that none of the predictors seem to have a particularly noticeable effect on the response. Moreover, in the previous section, we saw that the full model contains more predictors than it needs. This suggests we might be able to employ subset selection methods to produce a model with fewer than <span class="math inline">\(p\)</span> predictors and better predictive performance. This is essentially because we are able to learn the effects of the reduced number of predictors more precisely and so our predictions over unseen data show less variability. In this module we only consider best subset selection where our comparison considers all <span class="math inline">\(2^p\)</span> possible models (i.e. the model with no predictors, all <span class="math inline">\(p\)</span> models with one predictor, all <span class="math inline">\(\binom{p}{2}\)</span> models with two predictors, and so on). This method would be infeasible if <span class="math inline">\(p\)</span> was too large, say larger than about 40, in which case there are other methods that use heuristics to find a “good” model without considering all possible models. These will be studied in the context of linear regression in the Machine Learning module.</p>
+<p>In fact, we can perform best subset selection for generalised linear models, of which logistic regression is an example, using the <code>bestglm</code> function in the package of the same name. The algorithm is exactly the same as the one we studied for multiple linear regression except that when comparing models containing the same number of predictors, we use the negative log likelihood, rather than the residual sum of squares. (Though, as an aside, in multiple linear regression, comparison based on the residual sum of squares is equivalent to comparison based on the negative loglikelihood in terms of the ranking it produces). When comparing the best-fitting models containing <span class="math inline">\(0, 1, \ldots, p\)</span> predictors, i.e. the models we call <span class="math inline">\(\mathcal{M}_0, \mathcal{M}_1, \ldots, \mathcal{M}_p\)</span>, various model-comparison criteria can be used. Widely used examples are the AIC (equivalent to Mallow’s <span class="math inline">\(C_p\)</span> in the context of multiple linear regression), the BIC and the cross-validation test error. In all three cases small values of the information criterion indicate a “better” model.</p>
+<p>Before we start, load the <code>bestglm</code> package in R</p>
+<pre class="r"><code>## Load the bestglm package
+library(bestglm)</code></pre>
+<p>then look at the help file for the <code>bestglm</code> function by typing <code>?bestglm</code> in the console. You will see that the first argument is a data frame called <code>Xy</code>. Although it is not spelled out in the documentation, this means that the data must be arranged so that the last column of <code>Xy</code> is the response (i.e. <code>y</code>) variable and all the preceding columns are predictor (i.e. <code>X</code>) variables. If we check our data set:</p>
+<pre class="r"><code>head(MyWeekly)</code></pre>
+<pre><code>##   Year   Lag1   Lag2   Lag3   Lag4   Lag5    Volume Direction
+## 1 1990  0.816  1.572 -3.936 -0.229 -3.484 0.1549760         0
+## 2 1990 -0.270  0.816  1.572 -3.936 -0.229 0.1485740         0
+## 3 1990 -2.576 -0.270  0.816  1.572 -3.936 0.1598375         1
+## 4 1990  3.514 -2.576 -0.270  0.816  1.572 0.1616300         1
+## 5 1990  0.712  3.514 -2.576 -0.270  0.816 0.1537280         1
+## 6 1990  1.178  0.712  3.514 -2.576 -0.270 0.1544440         0</code></pre>
+<p>we see that the final column is <code>Direction</code> which is our response variable. We can therefore pass the <code>MyWeekly</code> data frame as it is.</p>
+
+<div class="question">
+<ul>
+<li>Create some made-up data in R: <span class="math inline">\(\phantom{X}\)</span> <code>mydata = data.frame(x1=rnorm(100), y=runif(100), x2=rnorm(100))</code>.</li>
+<li>In <code>mydata</code>, the columns labelled <code>x1</code> and <code>x2</code> are predictor variables and <code>y</code> is the binary response variable. Create a new matrix called <code>mydata_2</code> in a suitable form to be passed to the <code>bestglm</code> function.</li>
+<li>Please have a go by yourself before uncovering the solution.
+</div></li>
+</ul>
+<details>
+<summary>
+Click for solution
+</summary>
+<pre class="r"><code>## Enter made-up data:
+mydata = data.frame(x1=rnorm(100), y=runif(100), x2=rnorm(100))
+## Make the response variable the final column:
+mydata_2 = mydata[, c(1, 3, 2)]
+## Check it seems okay:
+head(mydata_2)</code></pre>
+<pre><code>##            x1         x2          y
+## 1 -0.08750406 -0.5474760 0.27628244
+## 2 -0.31335920  0.5336607 0.44909950
+## 3 -0.62017312 -1.5758077 0.86972397
+## 4 -1.86427618 -0.7319946 0.01432398
+## 5 -0.66387531  0.0519645 0.01669795
+## 6  1.73370442 -2.0174473 0.10176125</code></pre>
+</details>
+<p><br></p>
+<p>Returning to our stock market data, we can now apply best subset selection using the AIC and BIC by two applications of the <code>bestglm</code> function:</p>
+<pre class="r"><code>## Apply best subset selection
+bss_fit_AIC = bestglm(MyWeekly, family=binomial, IC=&quot;AIC&quot;)
+bss_fit_BIC = bestglm(MyWeekly, family=binomial, IC=&quot;BIC&quot;)</code></pre>
+<p>Note that, unlike the <code>regsubsets</code> function of the <code>leaps</code> package, each function call only gives the results based on one information criterion.</p>
+<p>The object returned by the <code>bestglm</code> function contains a number of useful components. You can read about the components of the object by typing <code>?bestglm</code> again in the console and reading the “Value” section. We will extract the component called <code>Subsets</code> which tells us which predictors are included in <span class="math inline">\(\mathcal{M}_0, \mathcal{M}_1, \ldots, \mathcal{M}_p\)</span> and the value of the chosen information criterion for each of these models:</p>
+<pre class="r"><code>## Examine the results
+bss_fit_AIC$Subsets</code></pre>
+<pre><code>##    Intercept  Year  Lag1  Lag2  Lag3  Lag4  Lag5 Volume logLikelihood      AIC
+## 0       TRUE FALSE FALSE FALSE FALSE FALSE FALSE  FALSE     -748.1012 1496.202
+## 1       TRUE FALSE FALSE  TRUE FALSE FALSE FALSE  FALSE     -745.2093 1492.419
+## 2*      TRUE FALSE  TRUE  TRUE FALSE FALSE FALSE  FALSE     -744.1102 1492.220
+## 3       TRUE FALSE  TRUE  TRUE FALSE  TRUE FALSE  FALSE     -743.6727 1493.345
+## 4       TRUE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  FALSE     -743.4081 1494.816
+## 5       TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  FALSE     -743.2229 1496.446
+## 6       TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  FALSE     -743.0794 1498.159
+## 7       TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE   TRUE     -743.0783 1500.157</code></pre>
+<pre class="r"><code>bss_fit_BIC$Subsets</code></pre>
+<pre><code>##    Intercept  Year  Lag1  Lag2  Lag3  Lag4  Lag5 Volume logLikelihood      BIC
+## 0*      TRUE FALSE FALSE FALSE FALSE FALSE FALSE  FALSE     -748.1012 1496.202
+## 1       TRUE FALSE FALSE  TRUE FALSE FALSE FALSE  FALSE     -745.2093 1497.412
+## 2       TRUE FALSE  TRUE  TRUE FALSE FALSE FALSE  FALSE     -744.1102 1502.206
+## 3       TRUE FALSE  TRUE  TRUE FALSE  TRUE FALSE  FALSE     -743.6727 1508.325
+## 4       TRUE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  FALSE     -743.4081 1514.788
+## 5       TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  FALSE     -743.2229 1521.411
+## 6       TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  FALSE     -743.0794 1528.117
+## 7       TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE   TRUE     -743.0783 1535.108</code></pre>
+<p>By construction, the implied models <span class="math inline">\(\mathcal{M}_0, \mathcal{M}_1, \ldots, \mathcal{M}_p\)</span> are the same in each case; all that differs is the final column giving the information criterion. The models minimising the AIC and BIC are starred in each case. They can also be extracted from the <code>bss_fit_AIC</code> and <code>bss_fit_BIC</code> objects:</p>
+<pre class="r"><code>## Identify best-fitting models
+(best_AIC = bss_fit_AIC$ModelReport$Bestk)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>(best_BIC = bss_fit_BIC$ModelReport$Bestk)</code></pre>
+<pre><code>## [1] 0</code></pre>
+<p>It seems that models with 0 or 2 predictors are to be preferred. However, we defer making our overall choice until we have considered a third model comparison criterion: the <span class="math inline">\(k\)</span>-fold cross-validation error. Before we apply <span class="math inline">\(k\)</span>-fold cross-validation in this context, we will introduction the general idea of <span class="math inline">\(k\)</span>-fold cross-validation for classification methods.</p>
+</div>
+<div id="k-fold-cross-validation" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> <span class="math inline">\(k\)</span>-fold Cross-Validation</h2>
+<p>As in the case of multiple linear regression, we can estimate the test error for a classifier based on logistic regression by using <span class="math inline">\(k\)</span>-fold cross-validation. In this lab, we will consider 10-fold cross-validation. To this end, as previously, we begin by dividing the data into 10 folds of approximately equal size:</p>
+<pre class="r"><code>## Set the seed (say, at 5) to make the analysis reproducible
+set.seed(5)
+## Sample the fold-assignment index
+nfolds = 10
+fold_index = sample(nfolds, n, replace=TRUE)
+## Print the first few fold-assignments
+head(fold_index)</code></pre>
+<pre><code>## [1] 2 9 9 9 5 7</code></pre>
+<p>So observation 1 is assigned to fold 2, observation 2 is assigned to fold 9, and so on.</p>
+
+<div class="question">
+<ul>
+<li>Referring to the worksheet from last week, write a function called <code>logistic_reg_fold_error</code> based on the <code>reg_fold_error</code> function. It should calculate the test error given a matrix of predictor variables <code>X</code>, a vector of response variables <code>y</code> and a vector of booleans <code>test_data</code> whose <span class="math inline">\(i\)</span>th element is equal to <code>TRUE</code> if observation <span class="math inline">\(i\)</span> is in the test set and equal to <code>FALSE</code> if observation <span class="math inline">\(i\)</span> is in the training set. Note:
+<ul>
+<li>You will need to change the line that fits the model to the training data</li>
+<li>You will need to change the line that generates the predictions (i.e. <code>yhat</code>) over the test data</li>
+<li>You will need to change the line that calculates the test error so it uses the misclassification rate and not the mean-squared error.</li>
+</ul></li>
+<li>Please have a go by yourself before uncovering the solution.
+</div></li>
+</ul>
+<details>
+<summary>
+Click for solution
+</summary>
+<pre class="r"><code>logistic_reg_fold_error = function(X, y, test_data) {
+  Xy = data.frame(X, y=y)
+  if(ncol(Xy)&gt;1) tmp_fit = glm(y ~ ., data=Xy[!test_data,], family=&quot;binomial&quot;)
+  else tmp_fit = glm(y ~ 1, data=Xy[!test_data,,drop=FALSE], family=&quot;binomial&quot;)
+  phat = predict(tmp_fit, Xy[test_data,,drop=FALSE], type=&quot;response&quot;)
+  yhat = ifelse(phat &gt; 0.5, 1, 0) 
+  yobs = y[test_data]
+  test_error = 1 - mean(yobs == yhat)
+  return(test_error)
+}</code></pre>
+</details>
+<p><br></p>
+<p>For the set of predictor variables passed through <code>X</code> and the binary response passed through <code>y</code>, the <code>logistic_reg_fold_error</code> function can be used to calculate the test error given a particular split of the data into training and validation sets.</p>
+<p>Referring to last week’s worksheet, recall our function <code>general_cv</code>. For convenience, it is reproduced below:</p>
+<pre class="r"><code>general_cv = function(X, y, fold_ind, fold_error_function) {
+  p = ncol(X)
+  Xy = cbind(X, y=y)
+  nfolds = max(fold_ind)
+  if(!all.equal(sort(unique(fold_ind)), 1:nfolds)) stop(&quot;Invalid fold partition.&quot;)
+  fold_errors = numeric(nfolds)
+  # Compute the test error for each fold
+  for(fold in 1:nfolds) {
+    fold_errors[fold] = fold_error_function(X, y, fold_ind==fold)
+  }
+  # Find the fold sizes
+  fold_sizes = numeric(nfolds)
+  for(fold in 1:nfolds) fold_sizes[fold] = length(which(fold_ind==fold))
+  # Compute the average test error across folds
+  test_error = weighted.mean(fold_errors, w=fold_sizes)
+  # Return the test error
+  return(test_error)
+}</code></pre>
+<p>For any simple regression or classification method, we can use this general function to calculate the cross-validation error by passing a function <code>fold_error_function</code> which tailors it to the specific regression or classification method we are interested in. More specifically, this function <code>fold_error_function</code> should calculate the test error for a particular split of the data into test and validation data. It should take as arguments a matrix of predictors <code>X</code>, a response variable <code>y</code> and a vector of booleans <code>fold_ind</code> which is equal to TRUE in position <span class="math inline">\(i\)</span> if the <span class="math inline">\(i\)</span>th observation is in the validation set and equal to <code>FALSE</code> otherwise. The function <code>logistic_reg_fold_error</code> that we wrote above meets this requirements for logistic regression. We can therefore use the function <code>general_cv</code> with <code>logistic_reg_fold_error</code> to calculate the test error of our full model as follows:</p>
+<pre class="r"><code>(test_error = general_cv(MyWeekly[,1:p], MyWeekly[,p+1], fold_index, logistic_reg_fold_error))</code></pre>
+<pre><code>## [1] 0.4536272</code></pre>
+<p>Not surprisingly, we see that the test error is larger than the training error, though still slightly better than flipping a coin. Hopefully it comes as no surprise that this simple method cannot accurately predict changes in the stock market!</p>
+<p>Now that we have seen how <span class="math inline">\(k\)</span>-fold cross-validation works in general, we can apply it as another criteria for picking the number of predictors in best subset selection.</p>
+</div>
+<div id="using-k-fold-cross-validation-in-best-subset-selection" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Using <span class="math inline">\(k\)</span>-fold Cross-Validation in Best Subset Selection</h2>
+<p>We shall write a function which estimates the test error for best fitting models with <span class="math inline">\(0, 1, \ldots, p\)</span> predictors using 10-fold cross-validation.</p>
+<p>A function which wraps around <code>logistic_reg_fold_error</code> to calculate the test error for best-fitting models with <span class="math inline">\(0, 1, \ldots, p\)</span> predictors is given below:</p>
+<pre class="r"><code>logistic_reg_bss_cv = function(X, y, fold_ind) {
+  p = ncol(X)
+  Xy = data.frame(X, y=y)
+  X = as.matrix(X)
+  nfolds = max(fold_ind)
+  if(!all.equal(sort(unique(fold_ind)), 1:nfolds)) stop(&quot;Invalid fold partition.&quot;)
+  fold_errors = matrix(NA, nfolds, p+1) # p+1 because M_0 included in the comparison
+  for(fold in 1:nfolds) {
+    # Using all *but* the fold as training data, find the best-fitting models 
+    # with 0, 1, ..., p predictors, i.e. identify the predictors in M_0, M_1, ..., M_p
+    tmp_fit = bestglm(Xy[fold_ind!=fold,], family=binomial, IC=&quot;AIC&quot;)
+    best_models = as.matrix(tmp_fit$Subsets[,2:(1+p)])
+    # Using the fold as test data, find the test error associated with each of 
+    # M_0, M_1,..., M_p
+    for(k in 1:(p+1)) {
+      fold_errors[fold, k] = logistic_reg_fold_error(X[,best_models[k,]], y, fold_ind==fold)
+    }
+  }
+  # Find the fold sizes
+  fold_sizes = numeric(nfolds)
+  for(fold in 1:nfolds) fold_sizes[fold] = length(which(fold_ind==fold))
+  # For models with 0, 1, ..., p predictors compute the average test error across folds
+  test_errors = numeric(p+1)
+  for(k in 1:(p+1)) {
+    test_errors[k] = weighted.mean(fold_errors[,k], w=fold_sizes)
+  }
+  # Return the test error for models with 0, 1, ..., p predictors
+  return(test_errors)
+}</code></pre>
+<p>Let us talk through how the function works, assuming there are 10 folds, i.e. <code>nfolds=10</code>. We focus first on the first for loop over the <code>fold</code> variable. When fold 1 is taken as the validation data, we can use folds 2–10 as training data and apply the <code>bestglm</code> function to find the subset of predictors in the best-fitting models with <span class="math inline">\(0, 1, \ldots, p\)</span> predictors. Passing the predictors in the best-fitting model with <span class="math inline">\(k\)</span> predictors, we can then apply our function <code>logistic_reg_fold_error</code> to fit this <span class="math inline">\(k\)</span>-predictor model to our training data (folds 2–10) and compute the test error over our validation data (fold 1). We perform this step <span class="math inline">\(p+1\)</span> times – once for each number of predictors, <span class="math inline">\(k=0,1,\ldots,p\)</span>. Finally we repeat this whole procedure, taking fold 2 as the validation data and folds 1 and 3–10 as training data. We then repeat again taking fold 3 as the validation data and folds 1–2 and 4–10 as training data. And so on. For every value of <span class="math inline">\(k=0,1,\ldots,p\)</span>, we then have the test error associated with each of the 10 folds for the model with <span class="math inline">\(k\)</span> predictors. In the for loop over <code>k</code> towards the end of the function, these 10 values are averaged to get the test error for the model with <span class="math inline">\(k\)</span> predictors. So we end up with the test error for models with <span class="math inline">\(0, 1, \ldots, p\)</span> predictors calculated by 10-fold cross validation.</p>
+<p>We can now apply our function to the stock market data:</p>
+<pre class="r"><code>## Apply the cross-validation for best subset selection function
+cv_errors = logistic_reg_bss_cv(MyWeekly[,1:p], MyWeekly[,p+1], fold_index)
+## Identify the number of predictors in the model which minimises test error
+(best_cv = which.min(cv_errors) - 1)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p>where we add one to the output of the <code>which.min</code> function because the test error for model with 0 predictors has index 1. Cross-validation suggests the model with 1 predictors. Referring back to Section <a href="#subsec:bss">3.2</a>, AIC and BIC suggested the models with 2 and 0 predictors, respectively. As for multiple linear regression, different criteria often suggest different models are “best”, and this is the case here. In order to reconcile the differences and choose a single “best” model we can generate a plot to show how the criteria vary with the number of predictors:</p>
+<pre class="r"><code>## Create multi-panel plotting device
+par(mfrow=c(2, 2))
+## Produce plots, highlighting optimal value of k
+plot(0:p, bss_fit_AIC$Subsets$AIC, xlab=&quot;Number of predictors&quot;, ylab=&quot;AIC&quot;, type=&quot;b&quot;)
+points(best_AIC, bss_fit_AIC$Subsets$AIC[best_AIC+1], col=&quot;red&quot;, pch=16)
+plot(0:p, bss_fit_BIC$Subsets$BIC, xlab=&quot;Number of predictors&quot;, ylab=&quot;BIC&quot;, type=&quot;b&quot;)
+points(best_BIC, bss_fit_BIC$Subsets$BIC[best_BIC+1], col=&quot;red&quot;, pch=16)
+plot(0:p, cv_errors, xlab=&quot;Number of predictors&quot;, ylab=&quot;CV error&quot;, type=&quot;b&quot;)
+points(best_cv, cv_errors[best_cv+1], col=&quot;red&quot;, pch=16)</code></pre>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bestsubsetselection"></span>
+<img src="Week10Sheet-Discriminant-Analysis_files/figure-html/bestsubsetselection-1.png" alt="Best subset selection for the `Weekly` data." width="672" />
+<p class="caption">
+Figure 3.1: Best subset selection for the <code>Weekly</code> data.
+</p>
+</div>
+<p>This generates the plots above. It seems like the model with one predictor is a good compromise. We can extract the variables from the best-fitting 1-predictor model from the output of the <code>bestglm</code> function:</p>
+<pre class="r"><code>pstar = 1
+## Check which predictors are in the 2-predictor model
+bss_fit_AIC$Subsets[pstar+1,]</code></pre>
+<pre><code>##    Intercept  Year  Lag1 Lag2  Lag3  Lag4  Lag5 Volume logLikelihood      AIC
+## 1       TRUE FALSE FALSE TRUE FALSE FALSE FALSE  FALSE     -745.2093 1492.419</code></pre>
+<pre class="r"><code>## Construct a reduced data set containing only the 2 selected predictors
+bss_fit_AIC$Subsets[pstar+1, 2:(p+1)]</code></pre>
+<pre><code>##     Year  Lag1 Lag2  Lag3  Lag4  Lag5 Volume
+## 1  FALSE FALSE TRUE FALSE FALSE FALSE  FALSE</code></pre>
+<pre class="r"><code>(indices = which(bss_fit_AIC$Subsets[pstar+1, 2:(p+1)]==TRUE))</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>MyWeekly_red = MyWeekly[,c(indices, p+1)]
+## Obtain regression coefficients for this model
+logreg1_fit = glm(Direction ~ ., data=MyWeekly_red, family=&quot;binomial&quot;)
+summary(logreg1_fit)</code></pre>
+<pre><code>## 
+## Call:
+## glm(formula = Direction ~ ., family = &quot;binomial&quot;, data = MyWeekly_red)
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)  0.21473    0.06123   3.507 0.000453 ***
+## Lag2         0.06279    0.02636   2.382 0.017230 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1496.2  on 1088  degrees of freedom
+## Residual deviance: 1490.4  on 1087  degrees of freedom
+## AIC: 1494.4
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+<p>We see that the selected model uses <code>Lag2</code> as a predictor and its coefficient in the 1-predictor model is significantly different from zero. The corresponding coefficient is 0.06279. This is positive which suggests that higher returns two weeks ago are associated with a higher probability of a positive return today.</p>
+<p>What is the test error associated with our chosen 1-predictor model? You might think you can extract it from the <code>cv_errors</code> vector calculated above. However, this would simply give us an estimate of the test error for <em>a</em> 1-predictor model. Since the <code>bestglm</code> function in <code>logistic_reg_bss_cv</code> might have picked a different 1-predictor model <span class="math inline">\(\mathcal{M}_1\)</span> for each of the 10 training sets (i.e. folds 2–10, folds 1 and 3–10, <span class="math inline">\(\ldots\)</span>, folds 1–9), we have not necessarily estimated the test error associated with <em>our</em> 1-predictor model, i.e. the model with predictors <code>Lag1</code> and <code>Lag2</code>.</p>
+<p>We can therefore estimate the test error of our 1-predictor model as follows:</p>
+<pre class="r"><code>(test_error = general_cv(MyWeekly_red[,1:pstar], MyWeekly_red[,pstar+1], fold_index, logistic_reg_fold_error))</code></pre>
+<pre><code>## [1] 0.4426079</code></pre>
+<p>We see that the test error is slightly lower than that we obtained for the full-model.</p>
+</div>
+</div>
+<div id="linear-discriminant-analysis" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Linear Discriminant Analysis</h1>
+<p>Continuing to use only <code>Lag2</code> as a predictor, now we will use the full data set to build our Bayes classifier for LDA:</p>
+<pre class="r"><code>## Load the MASS package:
+library(MASS)
+## Apply LDA:
+(lda_fit = lda(Direction ~ ., data=MyWeekly_red))</code></pre>
+<pre><code>## Call:
+## lda(Direction ~ ., data = MyWeekly_red)
+## 
+## Prior probabilities of groups:
+##         0         1 
+## 0.4444444 0.5555556 
+## 
+## Group means:
+##          Lag2
+## 0 -0.04042355
+## 1  0.30428099
+## 
+## Coefficients of linear discriminants:
+##            LD1
+## Lag2 0.4251523</code></pre>
+<p>We see that when <code>Direction=0</code> (i.e. when the stock market goes down), the means of the predictor <code>Lag2</code> is -0.0404236. When <code>Direction=1</code> (i.e. when the stock market goes up), the mean is 0.304281. Notice that since we can regard our data as a random sample of (consecutive) weekly stock returns, we can estimate the prior membership probabilities <span class="math inline">\(\pi_1\)</span> and <span class="math inline">\(\pi_2\)</span> using the default sample proportions displayed in the output above.</p>
+
+<div class="question">
+<ul>
+<li>Referring to the associated lecture-workshop notes if necessary, write a few lines of code to compute the (training) confusion matrix and training error.</li>
+<li>Please have a go by yourself before uncovering the solution.
+</div></li>
+</ul>
+<details>
+<summary>
+Click for solution
+</summary>
+<pre class="r"><code>## Compute predicted values:
+lda_predict = predict(lda_fit, MyWeekly_red)
+yhat = lda_predict$class
+## Calculate confusion matrix:
+(confusion = table(Observed=MyWeekly_red$Direction, Predicted=yhat))</code></pre>
+<pre><code>##         Predicted
+## Observed   0   1
+##        0  33 451
+##        1  25 580</code></pre>
+<pre class="r"><code>## Calculate training error:
+1 - mean(MyWeekly_red$Direction == yhat)</code></pre>
+<pre><code>## [1] 0.4370983</code></pre>
+</details>
+<p><br></p>
+<p>We shall use 10-fold cross-validation again to estimate the test error.</p>
+
+<div class="question">
+<ul>
+<li>Modify the function <code>logistic_reg_fold_error</code> we wrote for logistic regression so that it calculates the test error for LDA given a particular split of the data into training and validation data. Note that we need only consider the case where <code>ncol(Xy)&gt;1</code> since discriminant analysis does not really make sense if there are no predictors.</li>
+<li>Please have a go by yourself before uncovering the solution.
+</div></li>
+</ul>
+<details>
+<summary>
+Click for solution
+</summary>
+<pre class="r"><code>lda_fold_error = function(X, y, test_data) {
+  Xy = data.frame(X, y=y)
+  if(ncol(Xy)&gt;1) tmp_fit = lda(y ~ ., data=Xy[!test_data,])
+  tmp_predict = predict(tmp_fit, Xy[test_data,])
+  yhat = tmp_predict$class 
+  yobs = y[test_data]
+  test_error = 1 - mean(yobs == yhat)
+  return(test_error)
+}</code></pre>
+</details>
+<p><br></p>
+<p>We can now pass this function as an argument to the <code>general_cv</code> function to compute the test error by cross-validation. To keep the comparison with logistic regression fair, we will use the same partition of the data into folds, i.e. the same <code>fold_index</code> vector:</p>
+<pre class="r"><code>(test_error = general_cv(MyWeekly_red[,1:pstar], MyWeekly_red[,pstar+1], fold_index, lda_fold_error))</code></pre>
+<pre><code>## [1] 0.4444444</code></pre>
+<p>We note that our test error is almost identical to that obtained using the 1-predictor logistic regression model.</p>
+</div>
+<div id="quadratic-discriminant-analysis" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Quadratic discriminant analysis</h1>
+
+<div class="question">
+<ul>
+<li>By making minor modifications to the code for LDA above, calculate the training error for the Bayes classifier for QDA. Similarly, calculate the tests error using 10-fold cross-validation and the same partition of the data into folds.</li>
+<li>Please have a go by yourself before uncovering the solution.
+</div></li>
+</ul>
+<details>
+<summary>
+Click for solution
+</summary>
+<p>First we calculate the training error:</p>
+<pre class="r"><code>## Apply QDA:
+(qda_fit = qda(Direction ~ ., data=MyWeekly_red))</code></pre>
+<pre><code>## Call:
+## qda(Direction ~ ., data = MyWeekly_red)
+## 
+## Prior probabilities of groups:
+##         0         1 
+## 0.4444444 0.5555556 
+## 
+## Group means:
+##          Lag2
+## 0 -0.04042355
+## 1  0.30428099</code></pre>
+<pre class="r"><code>## Compute predicted values:
+qda_predict = predict(qda_fit, MyWeekly_red)
+yhat = qda_predict$class
+## Calculate confusion matrix:
+(confusion = table(Observed=MyWeekly_red$Direction, Predicted=yhat))</code></pre>
+<pre><code>##         Predicted
+## Observed   0   1
+##        0   0 484
+##        1   0 605</code></pre>
+<pre class="r"><code>## Calculate training error:
+1 - mean(MyWeekly_red$Direction == yhat)</code></pre>
+<pre><code>## [1] 0.4444444</code></pre>
+<p>Now we modify slightly the <code>lda_fold_error</code> function to use QDA instead of LDA:</p>
+<pre class="r"><code>qda_fold_error = function(X, y, test_data) {
+  Xy = data.frame(X, y=y)
+  if(ncol(Xy)&gt;1) tmp_fit = qda(y ~ ., data=Xy[!test_data,])
+  tmp_predict = predict(tmp_fit, Xy[test_data,])
+  yhat = tmp_predict$class 
+  yobs = y[test_data]
+  test_error = 1 - mean(yobs == yhat)
+  return(test_error)
+}</code></pre>
+<p>Finally, we apply the <code>general_cv</code> function to calculate the test error:</p>
+<pre class="r"><code>(test_error = general_cv(MyWeekly_red[,1:pstar], MyWeekly_red[,pstar+1], fold_index, qda_fold_error))</code></pre>
+<pre><code>## [1] 0.4471993</code></pre>
+It seems the performance of QDA is slightly worse than that for LDA and logistic regression in this example.
+</details>
+<p><br></p>
+
+<div class="question">
+<ul>
+<li>The general function <code>general_cv</code> does not return the test confusion matrix because it would not be meaninfully defined for regression problems. How might you write a new function, just for classification problems, that can do this?
+</div></li>
+</ul>
+<details>
+<summary>
+Click for solution
+</summary>
+I would like you to have a think about this for yourselves but please do ask if you don’t know where to start.
+</details>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
